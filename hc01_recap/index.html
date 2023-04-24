@@ -10,7 +10,18 @@
     <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon"/>
 
     <!-- HTML kodunuz stillendirme dosyasi ile baglantisi -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stil.css">
+    <style>
+        /* internal CSS */
+        .par {
+            color: white;
+            background-color: red;
+        }
+       /* ID ile erisim */
+        #container {
+            border: 2px solid yellowgreen;
+        }
+    </style>
 
     <title>Recap</title>
 </head>
@@ -21,8 +32,9 @@
     <h4>Merhaba H1 etiketidir.</h4>
     <h5>Merhaba H1 etiketidir.</h5>
     <h6>Merhaba H1 etiketidir.</h6>
-    <div>
-        <p>Lorem ipsum dolor sit amet consectetur 
+    <div id="container">
+        <p class="par">
+            Lorem ipsum dolor sit amet consectetur 
            adipisicing elit. Maiores, accusantium quae 
            perspiciatis explicabo nobis eligendi temporibus unde, 
            commodi illum esse aliquid quasi sapiente. Odio, ad eaque 
@@ -30,7 +42,21 @@
            repellendus aliquid illum necessitatibus adipisci molestiae quos? 
            Adipisci laboriosam ab molestiae vel similique. Culpa, eaque?</p>
 
-           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptate numquam quos odio corrupti consequuntur quis atque blanditiis in, voluptatibus exercitationem veniam quod optio inventore cum. Doloremque reprehenderit voluptatum assumenda.</p>
+           <p style="color:blueviolet; background-color: beige;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptate numquam quos odio corrupti consequuntur quis atque blanditiis in, voluptatibus exercitationem veniam quod optio inventore cum. Doloremque reprehenderit voluptatum assumenda.</p>
+
+           <p class="par">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam aperiam facere voluptatem architecto corrupti distinctio at saepe deserunt minus repudiandae inventore dolores vitae maiores, nam beatae soluta. Repellat, libero repudiandae?</p>
     </div>
+    <section>
+        Lorem ipsum dolor sit amet <u>consectetur</u>  adipisicing elit. Necessitatibus aspernatur <b>exercitationem,</b>  repudiandae <mark fugiat></mark> repellendus <strong>modi,</strong>  eius pariatur officiis praesentium, dolor voluptates! Repudiandae animi distinctio odio <em>esse</em> voluptate totam, facere mollitia!
+    </section>
+
+    <p>Suyun formulu H <sub>2</sub>O </p>
+    <p>Formul x<sup>2</sup>+3 </p>
+    <br>
+
+    <article>
+        Bu urunun fiyati <span style="color:red">500 TL</span>
+    </article>
 </body>
 </html>
