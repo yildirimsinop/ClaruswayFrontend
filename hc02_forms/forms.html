@@ -9,11 +9,92 @@
 <body>
     <h1>FORMS</h1>
 
-    <form action="" method="post">
+    <form action="result.html" method="get">
         <section id="name">
+
+            <!-- name -->
             <label for="isim">Isim</label> <br>
-            <input type="text" id="isim" placeholder="Adinizi giriniz" name="">
+            <input type="text" 
+            id="isim" 
+            placeholder="Adinizi giriniz" 
+            name="isim" 
+            value=""
+            required
+            >
+            <br> <br>
+            <!-- Password -->
+            <label for="pass">Password</label> <br>
+            <input type="password" 
+            id="pass"
+            name="pass"
+            placeholder="En az 8 karakter giriniz"
+            required
+            >
+            <br><br>
+            <!-- Email -->
+            <label for="email">Email</label> <br>
+            <input type="email" 
+            id="email"
+            name="email"
+            placeholder="Email giriniz"
+            required
+            >
+            <br> <br>
+            <!-- Age -->
+            <label for="age">Age</label> <br>
+            <input type="number" 
+            id="age"
+            name="age"
+            min="0"
+            max="160"
+            placeholder="Yasinizi giriniz"
+            required
+            >
+            <br><br>
+            <!-- GENDER (RADIO BUTTON)-->
+            <p>Gender</p>
+            <label for="erkek">Erkek</label>
+            <input type="radio" id="erkek" name="gender" value="Erkek" checked>
+
+            <label for="kadin">Kadin</label>
+            <input type="radio" id="kadin" name="gender" value="Kadin">
+
+            <label for="nono">Nano</label>
+            <input type="radio" id="none" name="gender" value="None">
+            <br><br>
+
+            <label for="fav-cars">LUTFEN FAVORI ARABALARINIZI SECINIZ</label> <br><br>
+            <input type="checkbox" name="cars1" id="" value="BMW">
+            <label for="bmw">BMW</label>
+
+            <input type="checkbox" name="cars2" id="" value="mercedes">
+            <label for="mercedes">Mercedes</label> <br><br>
+
+            <label for="dob">Dogum Tarihi</label> <br>
+            <input type="date" name="dob" id="dob" min="1990-01-01"
+            > <br><br>
         </section>
+
+        <section>
+            <select name="tatli" id="tatli">
+                <optgroup label="Serbetli Tatlilar"> 
+                    <option value="kunefe">Kunefe</option>
+                    <option value="havuc dilimi">H.Dilimi</option>
+                </optgroup>
+                
+               <optgroup label="Sutlu Tatlilar">
+                   <option value="sutlac">Sutlac</option>
+                   <option value="kazan dibi">Kazan Dibi</option>
+               </optgroup>
+            </select>
+        </section>
+        <section id="buttons">
+            <br>
+            <input type="submit" value="kaydet">
+            <input type="reset" value="sil">
+        </section>
+
+
     </form>
 </body>
 </html>
