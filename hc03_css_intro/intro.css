@@ -1,0 +1,8 @@
+/*! Universal selector*/
+/*? Tum elementleri secer*/
+* {
+    /*? Tum elementlerin dis bosluklarini sifirladik */
+    margin: 0;
+    padding: 0;
+    color: tomato;
+}
