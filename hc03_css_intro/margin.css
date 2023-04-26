@@ -10,8 +10,12 @@
 .container {
     background-color: bisque;
     margin: 50px; /*? 4 tarafa 50 px bosluk birakir*/
-    margin: 10px 30px;
+    margin: 10px 30px; /*? ust alt 10px, sag sol 30px */
     margin: 10px 20px 30px 40px;
+
+    /*!/*! Bir blok element icerinde inline elementler var ise bunlar text-align ile hizalanabilir. Blok element icerisindeki blok elementler text align ile hizalanamaz. */
+    text-align: center;
+    margin: auto;
 }
 
 .div {
@@ -21,4 +25,5 @@
 
     margin-top: 10px;
     margin-bottom: 20px;
+    border-radius: 10px;
 }
