@@ -5,4 +5,32 @@
     margin: 0;
     padding: 0;
     color: tomato;
+
+    /*? hexadesimal colors */
+    color: #123456;
+    color: #bebe;
+    color: #dede;
+    color: #ece;
+    color: #333;
+    color: #eee;
+    color: #000;
 }
+/* ? class, etiketlere gore daha ozel bir secici oldugu icin digerini ezer*/
+.images {
+    width: 400px;
+    
+    /* !Border */
+border-color: #ece;
+border-width: 6px;
+border-style: solid;
+border-style: inset;
+
+/* !Shorthand */
+border: 7px inset #bebe;
+}
+
+/* img {
+    width: 100px;
+} */
+
+
