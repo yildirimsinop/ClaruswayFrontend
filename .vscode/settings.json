@@ -1,4 +1,4 @@
 {
     "interactiveSession.editor.wordWrap": "off",
-    "diffEditor.wordWrap": "on"
+    "diffEditor.wordWrap": "inherit"
 }
