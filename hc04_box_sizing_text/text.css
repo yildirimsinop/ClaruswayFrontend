@@ -63,4 +63,8 @@ body {
     word-spacing: 5px; /*? kelimeler arasi mesafe*/
     line-height: 1.4; /*? satir yuksekligi*/
   }
+
+  .indent {
+    text-indent: 10px;
+  }
   
