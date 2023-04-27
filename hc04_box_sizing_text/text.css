@@ -1,0 +1,48 @@
+body {
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+
+}
+
+.font {
+    font-size: 2;
+}
+
+.text-style {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+/* ? Buyukluk */
+    font-size: 20px;
+
+/* ?Kalinlik */
+    font-weight: lighter;
+    font-weight: 500;
+    font-weight: bolder;
+
+/* ?Style */
+    font-style: italic;
+
+    font-variant: small-caps;
+
+/* ? Hizalama left, right, center, justify */
+    text-align: justify;
+}
+/*? Descendant Selector */
+/* ! p elementinin icerisindeki span'lerin rengini red yap  */
+/* p span {
+    color: red;
+} */
+
+#my-body .text-style span {
+    color: red;
+}
+
+.decoration {
+color: green;
+text-decoration: overline; /*? Ust cizgi*/
+text-decoration: underline; /*? alt cizgi*/
+text-decoration: line-through; /*? uzerini cizgi*/
+text-decoration: none; /*? default*/
+
+}
