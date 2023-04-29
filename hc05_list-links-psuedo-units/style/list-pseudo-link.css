@@ -153,9 +153,14 @@ ul.before-after li::before {
 ul.before-after li:nth-child(3)::after {
   content: " 😍";
 }
+
 ul.before-after li:nth-child(2)::after {
   content: "   Nice car";
   font-family:"Font Awesome 6 Free";
   font-weight: 600;
   content: " \f53a";
+}
+
+ul.before-after li:nth-child(3):hover::after {
+  content: " 👩‍🦽";
 }
