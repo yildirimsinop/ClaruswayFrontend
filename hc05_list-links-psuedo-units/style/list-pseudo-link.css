@@ -66,6 +66,11 @@ ul.pseudo li:nth-child(even) {
   color: lightsalmon;
 }
 
+? Tek degilse
+ul.pseudo li:not(odd) {
+  color: green;
+}
+
 /* ? Fare ile li'lerin uzerine gelindiginde */
 ul.pseudo li:hover {
   /* opacity: 0.5; */
@@ -80,6 +85,8 @@ ul.pseudo li:active {
   cursor: pointer;
   /* display: inline-block; */
 }
+
+
 
 /*? class'i x olan p elementinin icerinde .y class'inin içindeki z id'li elementi sec  */
 /* p.x .y #z{
