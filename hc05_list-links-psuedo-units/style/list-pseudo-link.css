@@ -1,0 +1,38 @@
+body {
+  
+font-family: 'Quicksand', sans-serif;
+}
+ul {
+  font-family: 'Bruno Ace', cursive;
+  /*? Madde imi stilleri */
+  list-style-type: circle;
+  list-style-type: square;
+  list-style-type: none;
+  list-style-type: lower-latin;
+  list-style-type: georgian;
+
+  /*? Madde iminin yeri li'lerin içerisinde mi yoksa dışında mı olacak */
+  list-style-position: outside;
+
+  /*? Madde imlerinin soldaki boşluğunu ayarlamak için */
+  padding: 20px;
+
+  /*? madde iminin seklini linkteki icona gore sec */
+  list-style-image: url("../img/igloo-solid.svg");
+}
+
+h2 {
+  color: blueviolet;
+}
+
+/*? h2 icerisindeki i elementine uygula */
+h2 i {
+    /** iconlarin buyuklugunu 40px yap */
+  font-size: 40px;
+}
+
+/*? fa-solid adindaki class'a uygula */
+.fa-solid {
+  /** iconlarin rengini red yap */
+  color: red;
+}
