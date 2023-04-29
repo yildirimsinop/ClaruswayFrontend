@@ -1,11 +1,11 @@
 body {
-  
-font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
-/* ?class'i language olan ul elementini sec */
+/** class'ı language olan ul elementini sec */
 ul.languages {
-  font-family: 'Bruno Ace', cursive;
+  font-family: "Bruno Ace SC", cursive;
+
   /*? Madde imi stilleri */
   list-style-type: circle;
   list-style-type: square;
@@ -29,7 +29,7 @@ h2 {
 
 /*? h2 icerisindeki i elementine uygula */
 h2 i {
-    /** iconlarin buyuklugunu 40px yap */
+  /** iconlarin buyuklugunu 40px yap */
   font-size: 40px;
 }
 
@@ -38,37 +38,55 @@ h2 i {
   /** iconlarin rengini red yap */
   color: red;
 }
-
-
-/* ! --------PSEUDO CLASSES-------------- */
-ul.pesudo li:first-child {
-  color: blue;
-  font-weight: 700;
+/*!----- PSEUDO CLASSES ------- */
+ul.pseudo li {
   background-color: darkgray;
+  font-weight: 700;
 }
-ul.pesudo li:last-child {
+
+ul.pseudo li:first-child {
+  color: blue;
+}
+
+ul.pseudo li:last-child {
   color: green;
-  font-weight: 700;
 }
-ul.pesudo li:nth-child(odd) {
+
+ul.pseudo li:nth-child(5) {
+  color: purple;
+  font-weight: 300;
+}
+
+ul.pseudo li:nth-child(odd) {
   color: hotpink;
-  font-weight: 700;
   background-color: lightgray;
 }
-ul.pesudo li:nth-child(even) {
+
+ul.pseudo li:nth-child(even) {
   color: lightsalmon;
-  font-weight: 700;
-  
+}
+
+/* ? Fare ile li'lerin uzerine gelindiginde */
+ul.pseudo li:hover {
+  /* opacity: 0.5; */
+  background-color: black;
+  cursor: pointer;
+  /* display: inline-block; */
+}
+
+/* ? Fare'nin sol tusu ile bir li'ye tiklanildiginda */
+ul.pseudo li:active {
+  background-color: green;
+  cursor: pointer;
+  /* display: inline-block; */
 }
 
 /*? class'i x olan p elementinin icerinde .y class'inin içindeki z id'li elementi sec  */
-/* p.x .y #z {
+/* p.x .y #z{
 }
 <p class="x">
 <div class="y">
   <div id="z"></div>
+  <div class="k"></div>  
 </div>
 </p> */
-
-
-
