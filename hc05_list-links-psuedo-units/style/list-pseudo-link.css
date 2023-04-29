@@ -86,7 +86,46 @@ ul.pseudo li:active {
   /* display: inline-block; */
 }
 
+/* ? Input aktif hale geldiginde */
+input:focus {
+  background-color: tomato;
+  color: white;
+  /* border: 4px dotted white; */
+  outline: none;
+}
 
+/* ! --------LINK PSEUDO CLASSES--------------- */
+
+/* ? Ziyaret edilmemis link'leri secmek icin */
+nav.links a:link {
+  color: brown;
+}
+
+/* ? Ziyaret edilmis link'leri secmek icin */
+nav.links a:visited {
+  color: brown;
+}
+
+/* ? Link'ler tiklanildigi sure boyunca secmek icin */
+nev.links a:active {
+  color: magenta;
+}
+
+/* ? Fare ile Link'lerin uzerine gelindiginde secmek icin */
+nav.links a:hover {
+  color: chartreuse;
+  text-decoration: none;
+}
+
+/* nav.links a {
+  color: crimson;
+  text-decoration: none;
+}
+
+nav.links a {
+  color: purple;
+  text-decoration: underline;
+} */
 
 /*? class'i x olan p elementinin icerinde .y class'inin içindeki z id'li elementi sec  */
 /* p.x .y #z{
