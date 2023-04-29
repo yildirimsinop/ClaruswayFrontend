@@ -2,7 +2,9 @@ body {
   
 font-family: 'Quicksand', sans-serif;
 }
-ul {
+
+/* ?class'i language olan ul elementini sec */
+ul.languages {
   font-family: 'Bruno Ace', cursive;
   /*? Madde imi stilleri */
   list-style-type: circle;
@@ -36,3 +38,37 @@ h2 i {
   /** iconlarin rengini red yap */
   color: red;
 }
+
+
+/* ! --------PSEUDO CLASSES-------------- */
+ul.pesudo li:first-child {
+  color: blue;
+  font-weight: 700;
+  background-color: darkgray;
+}
+ul.pesudo li:last-child {
+  color: green;
+  font-weight: 700;
+}
+ul.pesudo li:nth-child(odd) {
+  color: hotpink;
+  font-weight: 700;
+  background-color: lightgray;
+}
+ul.pesudo li:nth-child(even) {
+  color: lightsalmon;
+  font-weight: 700;
+  
+}
+
+/*? class'i x olan p elementinin icerinde .y class'inin içindeki z id'li elementi sec  */
+/* p.x .y #z {
+}
+<p class="x">
+<div class="y">
+  <div id="z"></div>
+</div>
+</p> */
+
+
+
