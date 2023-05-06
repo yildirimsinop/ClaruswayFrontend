@@ -96,5 +96,45 @@ console.log(-61 / 0); // - Infinity
 console.log(0 / 5); // 0
 console.log(0 / - 5); // -0
 
+console.log(57/9); // 6.333333333333333
+
+//! % (Mod Alma) operatoru (Bolmedeki kalan sayiyi bulur)
+
+const mod1 = 57;
+const mod2 = 9;
+
+console.log(mod1 % mod2); //3
+
+const benimSayim = 967;
+
+//Const birlerBas
+const birlerBas = benimSayim % 10;
+console.log(birlerBas);//7
+
+//Const yuzlerBas
+
+const onlarBas = (benimSayim % 100) / 10; //6.7
+console.log(onlarBas);
+
+const yuzlerBas = benimSayim / 100 //9.67
+console.log(yuzlerBas);
+
+//?Bazi hazır fonksiyonlar
+// Math.floor();  //* her zaman en yakin alt tam sayiya yuvarlar
+// Math.ceil();  //* her zaman en yakin ust tam sayiya yuvarlar
+// Math.trunc(); //* sayinin tam kismini alir.
+// Math.round(); //* en yakin tam sayiya yuvarlar.
+// Math.random(); //* 0 ve 1 arasında rasgele sayi uretir.
+// toFixed(basamakSayısı): // . dan sonra parantezin içine verdiğimiz sayı kadar basamak alır. Eğer noktadan sonraki basamak sayısı içine verdiğimiz sayıdan büyükse sondaki rakamı bir artırır.
+
+console.log(`YuzlerBas: ${Math.trunc}`)
+
+const randomNum = Math.random();
+console.log(randomNum);
+
+const randomNum1 = Math.random() * 100;
+console.log(randomNum1 + 1);
+
+console.log(Math.round(Math.random ()*10));
 
 
