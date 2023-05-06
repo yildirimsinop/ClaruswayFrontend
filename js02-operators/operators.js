@@ -78,4 +78,23 @@ console.log("5" * "9"); //? 45  karakterler numeric ise number gibi davranarak i
 
 console.log(typeof ("5" * "9")); // number
 
+//! / operatoru
+
+const bol1 = 81;
+const bol2 = 9;
+
+console.log(bol1 / bol2);// 9
+
+console.log(bol1 / "9"); //9
+
+console.log(bol1 / "dokuz"); // Nan
+
+console.log(bol2 / 0); // Infinity
+console.log(-61 / 0); // - Infinity 
+//? JavaScript ile sonsuzluk-sınır değerini ifade etmek için Infinity veya -Infinity anahtar kelimesi kullanılır. Bir sayının 0'a bölünmesi Infinity veya –Infinity değeri döndürür.
+
+console.log(0 / 5); // 0
+console.log(0 / - 5); // -0
+
+
 
