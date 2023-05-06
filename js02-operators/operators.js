@@ -252,9 +252,68 @@ const num16 = 27;
 
 //? >=, <= (Büyük veya eşit mi?, Küçük veya eşit mi?)
 
-console.log(15 >= 15); //true
-console.log(15 <= 15); // true
-console.log(15 >= 16); // false
-// console.log(15 >== 16);// error verir. Çünkü bu şekilde karşılaştırma operatörü bulunmuyor.
-console.log(15 >= "15"); // true
-console.log("14" <= "15"); // true
+// console.log(15 >= 15); //true
+// console.log(15 <= 15); // true
+// console.log(15 >= 16); // false
+// // console.log(15 >== "15");// error verir. Çünkü bu şekilde karşılaştırma operatörü bulunmuyor.
+// console.log(15 >= "15"); // true
+// console.log("14" <= "15"); // true
+
+//! 🔥🔥🔥              Mantıksal Operatörler
+
+// && and
+console.log(true && true); // true
+console.log(" " && true); // true
+
+console.log(5 && "Merhaba"); // "Merhaba"
+console.log(0 && "Dünya"); // 0
+// && operatoru ilk gördüğü falsy veya false değerini döner.
+console.log(5 && 0); // 0
+console.log(true && false); // false
+
+//! || or
+console.log(true || false); //true
+console.log(5 || 15); // 5
+console.log(5 || 0); // 5
+console.log("" || "Merhaba"); // "Merhaba"
+console.log("" || 0); // 0
+// || operatoru true ve truthy değer arar. ilk gördüğü true veya truthy döner.Bulamazsa son gördüğü false veya falsy değeri döner.
+
+// ! not
+console.log(!true); // false
+console.log(!false); // true
+console.log(!0); // true
+console.log(!5); // false
+
+// falsy
+console.log(Boolean(false)); // false
+console.log(Boolean(0)); // false
+console.log(Boolean(-0)); // false
+console.log(Boolean(0n)); // false
+console.log(Boolean("")); // false (boş string)
+console.log(Boolean(null)); // false
+console.log(Boolean(undefined)); // false
+console.log(Boolean(NaN)); // false
+
+// truthy
+console.log(Boolean(true)); // true
+console.log(Boolean({})); // true (boş object)
+console.log(Boolean([])); // true (boş array)
+console.log(Boolean(5)); // true
+console.log(Boolean("0")); // true (dolu string)
+console.log(Boolean("false")); // true (dolu string)
+console.log(Boolean(Infinity)); // true
+console.log(Boolean(new Date())); // true (tarih methodları)
+console.log(Boolean(function () {})); // true (boş fonksiyon)
+console.log(
+  Boolean(function () {
+    console.log("Hello World!");
+  })
+); // true (boş fonksiyon)
+
+//! İşlem Önceliği sıralaması
+// 1. ! (not)
+// 2. && (and)
+// 3. || (or)
+const karşilaştırma = ("merhaba" && "dünya") || false || (28 && 67 && !0);
+console.log(karşilaştırma); // dünya
