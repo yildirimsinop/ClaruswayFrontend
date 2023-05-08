@@ -332,12 +332,12 @@ console.log(typeof (7 + num3)) // string
 // *            TIP DONUSUMLERI
 // * =============================================
 
-let sayi = +prompt("Bir sayi girinz:") //? 100
-console.log(typeof sayi)
-let sayi2 = 10
-sayi = sayi + sayi2 //? concatination
+// let sayi = +prompt("Bir sayi girinz:") //? 100
+// console.log(typeof sayi)
+// let sayi2 = 10
+// sayi = sayi + sayi2 //? concatination
 
-console.log(++sayi)
+// console.log(++sayi)
 
 console.log(Number("123")) //? 123
 console.log(Number("12.3")) //? 12.3
@@ -345,28 +345,29 @@ console.log(Number("0")) //? 0
 console.log(Number(" ")) //? 0
 console.log(Number("")) //? 0
 console.log(Number(null)) //? 0
+console.log(Number(undefined)) //? NaN
 
 const myNumber = "threezeroone" //? string
 let myNumber2 = Number(myNumber)
 console.log(myNumber2) //? NaN
 console.log(typeof myNumber2) //? number
 
-const dolar = "1000"
-const tl = "2000"
+const dolar = "1000.3"
+const tl = "2000.2"
 
 const totalMoney = Number(dolar) + +tl
 console.log(totalMoney)
 
+//* ALternatif olarak parseInt() ve parseFloat() da kullanilabilir.
 const dolarInt = parseInt(dolar) //? tamsayiya cevirir
 console.log(dolarInt)
-const tlFloat = parseFloat(tl) //? virgullu sayiya ceviri.
-console.log(tlFloat);
+const tlFloat = parseFloat(tl) //? virgüllü sayiya çevirir
+console.log(tlFloat)
 
-console.log(parseFloat(null));
-console.log(parseFloat(""));
-
+console.log(parseFloat(null)) //? NaN
+console.log(parseFloat("")) //? NaN
+console.log(parseFloat(undefined)) //? NaN
 
 //? String
-
-const myNumber3 = 200
-console.log(String(myNumber3));
+const myNumber3 = 2000.5
+console.log(String(myNumber3))
