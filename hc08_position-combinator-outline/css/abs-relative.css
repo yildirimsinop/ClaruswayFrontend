@@ -37,6 +37,7 @@
     top: -5rem; /*? 5rem yukari cik*/
     left: 15rem; /*? 15rem saga kay*/
     z-index: 1; /*? 1, 0 dan büyük olduğu için diger kutunun uzerinde bulunur*/
+    /*? z-index nin default degeri 0 dir */
   }
   
   /*! Bir eleman position:absolute ise ve parent elemani da position:relative ise o zaman absolute eleman genel akisa gore degil relative (parent) elemana gore konumlandirilir. Ozellikle bu ikili bir resim uzerindeki yazıların konumunu belirlemek gibi bir birine gore goreceli konumlandirmalarda tercih edilir.*/
