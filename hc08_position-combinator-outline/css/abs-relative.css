@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+.box {
+    width: 10rem;
+    height: 10rem;
+    font-size: 1.4rem;
+    border: 1px solid royalblue;
+}
+
+.static {
+    background-color: hotpink;
+    position: static; /*?default*/
+}
+
+.relative-1 {
+    background-color: sandybrown;
+    position: relative;
+    top: 3rem;
+    left: 3rem;
+    /* bottom: 0; */
+    /* right: 10rem; */
+}
