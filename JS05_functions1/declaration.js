@@ -76,3 +76,29 @@ console.log(result3)
 //? Console'dan girilen bir sayinin tek veya cift olddgunu
 //? hesaplayan ve sonucu ana programa donduren kodu fonksiyonlar
 //? ile yaziniz.
+
+function isEvenOrOdd(num) {
+  if (num % 2 === 0) {
+    return "EVEN"
+  } else {
+    return "ODD"
+  }
+}
+//? Alternatif olarak
+function isEvenOrOdd(num) {
+  let result
+  if (num % 2 === 0) {
+    result = "EVEN"
+  } else {
+    result = "ODD"
+  }
+  return result
+}
+
+//? Alternatif olarak
+function isEvenOrOdd(num) {
+  return num % 2 === 0 ? "EVEN" : "ODD"
+}
+
+const num = prompt("Please enter a number:")
+console.log(`${num} is ${isEvenOrOdd(num)}`)
