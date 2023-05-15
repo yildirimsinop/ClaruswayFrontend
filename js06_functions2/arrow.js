@@ -61,3 +61,29 @@ console.log("VOLUME:", volume(r, h).toPrecision(5))
 //? toPrecision(5) aldigi parametreye gore bir sayinin tam ve kesir
 //? kisimlarinin ne kadarini gosterilecegini belirlemek icin
 //? kullanilabilir. 5 degeri tam ve kesir icin toplam 5 basamak kullan demektir.
+console.log("VOLUME:", volume(r, h).toExponential(5))
+//? toExponential() ise bir sayinin bilimsel (10 uzeri) olarak
+
+//* ORNEK: Bir fonksiyon icerisinde baska fonksiyonlar cagrilabilir (Hesap Makinası)
+//**************************************************/
+
+const compute = (n1, n2, operator) => {
+  let result = 0
+  switch (operator) {
+    case "+":
+      //   result = n1 + n2
+      result = add(n1, n2)
+      break
+    case "-":
+      break
+
+    default:
+      break
+  }
+}
+
+const n1 = +prompt("First Number:")
+const n2 = +prompt("Second Number:")
+const operator = prompt("Operator:")
+
+console.log(compute(n1, n2, operator))
