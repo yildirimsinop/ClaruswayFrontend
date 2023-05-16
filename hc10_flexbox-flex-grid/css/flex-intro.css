@@ -7,8 +7,31 @@
 ul.nav {
   background-color: cadetblue;
   list-style-type: none;
-  padding: 1rem;
+  /* padding: 1rem; */
+  height: 50vh;
   text-align: center;
+  display: flex;
+
+  /*! Elemanlarin dizilis yonu : column, row, row-reverse, column-reverse*/
+  flex-direction: row;
+
+  /*? Satirlar arasi bosluk, ilk verilen satirlar arasi, 2. verilen sutunlar arasi bosluktur. */
+
+  gap: 2rem 4rem;
+
+  flex-wrap: wrap;
+  /*? Sikistirma veya alt satira gecebilme: flex-wrap: wrap, nowrap, wrap-reverse */
+
+  /* ! Yatay Hizalama: justify-content */
+  /*? Flex-start, flex-end, center, space-around, space-evenly, space-between */
+  justify-content: center;
+
+  /* ! Dikey Hizalama => align-items */
+   /** flex-start, flex-end, center, stretch, baseline  */
+  align-items: center;
+
+  align-content: flex-start;
+
 } 
 
 ul.nav li {
@@ -16,5 +39,49 @@ ul.nav li {
   width: 7rem;
   padding: 0.5rem;
   border-radius: 5px;
+}
+
+/* ! FLEXBASIS, FLEX-GROW */
+
+.container {
+  background-color: cornflowerblue;
+  margin-top: 2rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.container * {
+  background-color: crimson;
+}
+
+.container header {
+  /* ? flex-grow bir item'in digerlerine gore buyume orani belirler. Fle grow:2, 2 kat buyu demektir. */
+  /* * flex-grow: 2 */
+  /* ? flex-basis bir item'in kaplayacagi uzunlugu belirler. %, rem, px gibi degerler alabilir */
+  flex-basis: 100%;
   
 }
+.container footer {
+  flex-basis: 100%;
+
+}
+.container main {
+flex-grow: 3; /*? main digerlerine gore 3 kat daha fazla buyuebilir.*/
+}
+.container .left {
+  flex-grow: 1; /*? left digerlerine gore 1 kat daha fazla buyuebilir.*/
+  
+}
+.container .right {
+  flex-grow: 2; /*? main digerlerine gore 2 kat daha fazla buyuebilir.*/
+  
+  /* shrink kuculme oranidir */
+  flex-shrink: 2;
+}
+
+
