@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Smokum&family=Ysabeau:wght@100;200;300;500&display=swap");
 
+@import "theme.css";
+
 :root {
   /*! Colors */
   --white: #ffd;
@@ -24,6 +26,10 @@
   --fs-md: 1rem;
   --fs-xs: 0.6rem;
   --fs-sm: 0.9rem;
+
+  /*! Shadows  */
+  --shadow-light: 0 0 10px rgba(0, 0, 0, 0.3);
+  --shadow-dark: 0 0 10px rgba(0, 0, 0, 0.6);
 }
 
 h1 {
@@ -33,14 +39,28 @@ h1 {
 
 p {
   font-family: var(--ff-smokum);
+  font-size: var(--fs-3xl);
 }
 
 button {
   width: 100px;
   padding: 1rem;
-  background-color: var(--green);
+  background-color: var(--purple);
+  font-size: var(--fs-lg);
 }
 
 button:hover {
   background-color: var(--green-light);
+}
+
+div.dark {
+  margin: 1rem;
+  box-shadow: var(--shadow-dark);
+  background-color: var(--orange-light);
+  border: 4px solid var(--green-light);
+}
+
+div.light {
+  margin: 1rem;
+  box-shadow: var(--shadow-light);
 }
