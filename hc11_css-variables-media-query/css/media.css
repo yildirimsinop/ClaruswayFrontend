@@ -1,0 +1,30 @@
+@import "media.css";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    border: 1px solid red;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    padding: 1rem;
+}
+
+/* ! MEDIA SORGULARI */
+
+@media screen and (max-width: 700px) {
+    nav {
+        flex-direction: column;
+    }
+}
