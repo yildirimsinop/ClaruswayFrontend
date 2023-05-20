@@ -183,10 +183,141 @@ console.log(cls) */
 // console.log(colors.unshift('Red')) //yeni oluşan array in uzunluğunu verir.
 // console.log(colors) //['Red', 'Green', 'Blue']
 
-const car = ['Audi', 'BMW']
-const car2 = ['Ford', 'Tesla', 'Mercedes']
+// const car = ['Audi', 'BMW']
+// const car2 = ['Ford', 'Tesla', 'Mercedes']
 
-car.unshift(car2) // 2. array i tek array olarak başa ekler. [['Ford', 'Tesla', 'Mercedes'],'Audi', 'BMW']
-// car.unshift(...car2) // her elemanı ayrı ayrı başa ekler
+// car.unshift(car2) // 2. array i tek array olarak başa ekler. [['Ford', 'Tesla', 'Mercedes'],'Audi', 'BMW']
+// // car.unshift(...car2) // her elemanı ayrı ayrı başa ekler. ['Ford', 'Tesla', 'Mercedes','Audi', 'BMW']
 
-console.log(car)
+// console.log(car)
+
+//shift
+
+// const colors = ['Red','Green', 'Blue','Yellow','Brown'];
+
+// console.log(colors.shift()) //İlk elemanı siler, sildiği değeri döndürür.
+
+// console.log(colors)
+
+
+//splice
+
+// const colors = ['Red','Green', 'Blue','Yellow','Brown']
+
+//Eleman silme
+// console.log(colors.splice(2,1)) // 2. index e git 1 eleman sil
+// console.log(colors.splice(2)) // 2. index e git sonuna kadar sil
+
+// console.log(colors)
+
+//Eleman ekleme
+
+// console.log(colors.splice(2,0, 'White')) //2. indexe git 0 elaman sil white ı ekle. Silmediği için [] döner.
+
+// console.log(colors)
+
+
+//Eleman değiştirme
+
+// console.log(colors.splice(3,1,'Pink'))
+// console.log(colors.splice(3,2,'Pink','Black')) //3 e git 2 elaman sil yerine uenilerini ekle. Silinenler aarray olarak döner
+
+// console.log(colors)
+
+
+//concat
+
+// let color1 = [ 'red', 'green']
+// const color2 = ['blue', 'orange']
+// const color3 = [10, true]
+
+// // const joinedArray = color1.concat(color2, color3)
+// // console.log(color1) 
+// // const destr = color1.push(...color2, ...color3)
+// // console.log(color1) 
+
+// color1 = color1.concat('Black',color2,2)
+// console.log(color1)
+
+//indexof lastindexof
+
+/*  const colors = ['Red','Green', 'Blue','Brown','Green']
+// console.log(colors.indexOf('Green'))//1
+// console.log(colors.indexOf('Green',3)) //4
+// console.log(colors.indexOf('green')) //-1 bulamazsa
+console.log(colors.lastIndexOf("Green")); //4
+console.log(colors.lastIndexOf("Green",-2)); //1
+console.log(colors.lastIndexOf("Green",3)); //1
+console.log(colors.lastIndexOf("green")); //-1 
+
+console.log(colors[colors.indexOf("Green")])
+ */
+
+//reverse
+// const colors = ['Red','Green', 'Blue','Green','Brown','yellow']
+// colors.reverse() //orjinal array i değiştirir.
+// console.log(colors)
+
+
+//join 
+
+// const arr = [ 'C', 'l', 'a', 'r', 'u', 's', 'w', 'a', 'y' ]
+
+// console.log(arr.join()) // C,l,a,r,u,s,w,a,y
+
+// console.log(arr.join("")) // Clarusway
+
+// console.log(arr.join("-")) // C-l-a-r-u-s-w-a-y
+// console.log(arr)
+
+//orjinal array bozulmaz. Array ii stringe çevirir
+
+
+//sort
+
+// const arr = [ 55, 5, 22, 2, 11, 1, 111 ]
+// arr.sort()
+// console.log(arr)
+
+// // ascending sorting
+// arr.sort((a,b) => a-b)
+// console.log(arr) // [ 1, 2, 5, 11, 22, 55, 111 ]
+
+// // descending sorting
+// arr.sort((a,b) => b-a) //numeritik olarak sıralar
+// console.log(arr) // [ 111, 55, 22, 11, 5,  2,  1 ]
+
+//includes
+/* const arr = [ 'red', 'blue', 'Purple', "white", "orange" ]
+
+console.log(arr.includes('blue')) // true
+
+console.log(arr.includes('Blue')) // false
+
+console.log(arr.includes('blue', 2)) // false */
+
+
+//Nested Arrays
+
+const arr = [1, true, [6, 7, 8], [3, 'Red', 5] ]
+arr.sort()
+// arr[2].splice(1,1,'yellow')
+// console.log(arr.length)
+
+// console.log(arr[0]) // 1
+
+// console.log(arr[2]) // [3, 'Red', 5]
+// console.log(arr[3]) // [6, 7, 8]
+
+// console.log(arr[2][0]) // 3
+// console.log(arr[2][1]) // Red
+// console.log(arr[2][2]) // 5
+
+// console.log(arr[3][2]) //8
+
+
+//ek bilgi
+
+// const arr = ['Red','Green',,,,,'Blue']
+
+console.log(arr)
