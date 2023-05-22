@@ -51,3 +51,22 @@ console.log(equalOrBiggerThan51);
 //* fonksiyon "ogrenci bulunamadi" dondurulmelidir.
 //*--------------------------------------------------------
 
+
+const students = ["ahmet", "mehmet", "ismet", "saffet", "ahmet", "saffet"]
+
+const findStudent = (name) => {
+  let counter = 0
+
+  for (let student of students) {
+    if (student === name) {
+      //* aranan dizinin icindeki elemana esitse
+      counter++ //* sayaci bir arttir
+    }
+  }
+
+  return counter
+}
+
+console.log(findStudent("ahmet"))
+console.log(findStudent("ismet"))
+console.log(findStudent("Alihan"))
