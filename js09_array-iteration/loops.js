@@ -2,46 +2,52 @@
 //*                FOR LOOP
 //* ============================================
 
-console.log("******* LOOPS IN ARRAYS ******")
+console.log("**** LOOPS IN ARRAYS ***")
+
+//?-------------- ÖRNEK -------------------
 //? grades'in ortalamasini hesaplayiniz.
-const grades = [55, 77, 23, 89, 100, 44, 33, 45]
+// const grades = [55, 77, 23, 89, 100, 44, 33, 45]
 
-let sum = 0
-for (let i = 0; i < grades.length; i++) {
-    sum += grades[i];
-    // console.log(sum);
-    
-}
+// let sum = 0
+// for (let i = 0; i < grades.length; i++) {
+//   sum += grades[i]
+//   //   console.log(sum)
+// }
 
-console.log("AVG:", (sum / grades.length).toFixed(2));
+// console.log("AVG:", (sum / grades.length).toFixed(2))
 
 //?-------------- ÖRNEK -------------------
 //? grades dizisindeki notların 50'den kucuk olanları ve buyuk olanları 2 ayri diziye kaydediniz.
+// const grades = [55, 77, 23, 89, 100, 44, 33, 45]
+// const lessThan50 = []
+// const equalOrBiggerThan50 = []
 
+// for (let j = 0; j < grades.length; j++) {
+//   if (grades[j] < 50) {
+//     lessThan50.push(grades[j])
+//   } else {
+//     equalOrBiggerThan50.push(grades[j])
+//   }
+// }
+// console.log(lessThan50)
+// console.log(equalOrBiggerThan50)
+// console.log(grades)
+
+//?-------------- ÖRNEK (FOR-IN) -------------------
+//? grades dizisindeki notların 50'den kucuk olanları ve buyuk olanları 2 ayri diziye kaydediniz.
+const grades = [55, 77, 23, 89, 100, 44, 33, 45]
 const lessThan50 = []
 const equalOrBiggerThan50 = []
 
-for (let j =0; j < grades.length; j++) {
-    if (grades[j]<50) {
-        lessThan50.push(grades[j])
-    } else {
-        equalOrBiggerThan50.push(grades[j])
-    }
+for (let i in grades) {
+  grades[i] < 50
+    ? lessThan50.push(grades[i])
+    : equalOrBiggerThan50.push(grades[i])
 }
 
-console.log(lessThan50);
-console.log(equalOrBiggerThan50);
-
-const lessThan51 = []
-const equalOrBiggerThan51 = []
-
-const grades2 = [55, 77, 23, 89, 100, 44, 33, 45]
-
-for (let i in grades2) {
-    grades2 [i] < 51 ? lessThan51.push(grades2[i]) : equalOrBiggerThan51.push(grades2[i])
-}
-console.log(lessThan51);
-console.log(equalOrBiggerThan51);
+console.log(lessThan50)
+console.log(equalOrBiggerThan50)
+console.log(grades)
 
 //*-------------------------------------------------------
 //* SORU: students dizisinde ogrenci isimleri saklanmaktadir.
@@ -50,23 +56,21 @@ console.log(equalOrBiggerThan51);
 //* fonksiyonu yaziniz. Eger aranilan isimde bir ogrenci yok ise
 //* fonksiyon "ogrenci bulunamadi" dondurulmelidir.
 //*--------------------------------------------------------
-
-
 const students = ["ahmet", "mehmet", "ismet", "saffet", "ahmet", "saffet"]
 
 const findStudent = (name) => {
   let counter = 0
 
   for (let student of students) {
-    if (student === name) {
-      //* aranan dizinin icindeki elemana esitse
-      counter++ //* sayaci bir arttir
-    }
+    student === name.toLowerCase() && counter++ //* aranan, dizinin icindeki elemana esitse
   }
 
-  return counter
+  return counter === 0
+    ? `${name} can not be found`
+    : `${name} found ${counter} times`
 }
 
-console.log(findStudent("ahmet"))
+console.log(findStudent("Ahmet"))
+console.log(findStudent("AHMET"))
 console.log(findStudent("ismet"))
 console.log(findStudent("Alihan"))
