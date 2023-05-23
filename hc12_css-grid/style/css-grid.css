@@ -40,3 +40,13 @@
   justify-content: center;
   align-items: center;
 }
+
+.c12 {
+  grid-column: span 3;
+  background-color: yellow;
+}
+
+.c9 {
+  grid-row: span 2;
+  background-color: springgreen;
+}
