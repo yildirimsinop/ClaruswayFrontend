@@ -172,7 +172,12 @@ const teamFullName1 = team.map((p) => ({
 console.log(teamFullName1)
 
 //* Ornek4: Yasi(age) 22 'den kucuk esit olan kisilerin adlarini (name) listeyiniz.
+team.filter((p) => p.age <= 22).forEach((p) => console.log(p.name))
 
 //* Ornek5: 22 yasindan kucuk ve esit olanlarin isimlerini diziye saklayiniz.
+const teamUnder22 = team.filter((x) => x.age <= 22).map((p) => p.name)
+console.log(teamUnder22)
 
 //* Ornek6: ortalama yasi hesaplayiniz.
+const avgAges = team.reduce((sum, person) => sum + person.age, 0) / team.length
+console.log("AVE AGE:", avgAges)
