@@ -41,19 +41,24 @@ addBtn.addEventListener("click", (e) => {
   //   console.log(e.target.value)
 
   if (!input.value) {
-    alert ("Please enter a comment")
-
+    alert("Please enter a comment")
   } else {
-  const input = document.querySelector("#input")
-  const li = document.createElement ("li")
-  ul.appendChild(li)
-  const textLi = document.createTextNode(input.value)
-  li.appendChild(textLi)
-  input.value = ""
-  input.focus()
-}
+    const input = document.querySelector("#input")
+    const li = document.createElement("li")
+    ul.appendChild(li)
+    const textLi = document.createTextNode(input.value)
+    li.appendChild(textLi)
+    input.value = ""
+    input.focus()
+  }
 })
 
-document.querySelector("#input").addEventListener("keydown", )
-
-
+//? input'un üzerinde iken bir klavye tusuna basilirsa calis
+document.querySelector("#input").addEventListener("keydown", (e) => {
+  //   console.log(e.code)
+  //   console.log(e.keyCode)
+  //? Basilan tus Enter ise
+  if (e.code === "Enter") {
+    addBtn.click() //? add butonun tiklanma fonksiyonu calistir.
+  }
+})
