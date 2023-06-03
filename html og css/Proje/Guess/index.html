@@ -9,12 +9,26 @@
 </head>
 <body>
     <main>
-        <h2>Guess The Number (1 - 100)</h2>
-        <p id="message">Guess The Number (1 - 100)</p>
-        <input type="number" id="userInput" min="1" max="100">
-        <button onclick="guess()" id="submit">CHECK</button>
-        <br><br>
-        <img src="./img/Skjermbilde 2023-06-03 164902.png" alt="">
+        <article>
+            <h2 class="theGuess">Guess The Number (1 - 100)</h2>
+
+        </article>
+            <p id="message"></p>
+            <input type="number" id="userInput" min="1" max="100">
+            <button onclick="guess()" id="submit" >CHECK</button>
+            <br><br>
+
+        
+        <div>
+            <img src="./img/cap.jpg" width="200px" height="250px" alt="">
+        </div>
+        <div>
+            <p class="write">Write the number.</p>
+        </div>
+        <div>
+            <p class="number">Number of attempte: 3</p>
+        </div>
+
     </main>
 
     <script src="./index.js"></script>
