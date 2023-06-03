@@ -1,0 +1,43 @@
+/* body {
+    background-image: url(./img/Skjermbilde\ 2023-06-03\ 164902.png);
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+} */
+
+main {
+
+    background: linear-gradient(#e66465, #9198e5);
+    
+    height: 100vh;
+
+}
+body {
+    /* background-color: black; */
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+}
+
+#message {
+    font-size: 1.3rem;
+    font-stretch: extra;
+    font-weight: 600;
+    margin-top: 7rem;
+    padding-top: 2.5rem;
+}
+
+main input {
+    width: 8rem;
+    border-radius: none;
+}
+
+main button {
+    color: white;
+    background-color: blue;
+}
