@@ -1,12 +1,24 @@
-
-#inputString {
-    margin-bottom: 0.5rem;
-    width: 22rem;
-    height: 2rem;
-
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-#inputString:focus {
-    outline: 2px solid orange;
-    border: none;
+/* <!-- ******************main area --> */
+#section{
+background-image: url(./img/banner.jpg);
+background-repeat: no-repeat;
+background-size:cover;
+background-position: center;
+height: 100vh;
+padding-top: 14rem;
+color: rgb(147,38,147);
+}
+
+i{
+    /* display: flex; */
+    width: 9rem;
+    height: 9rem;
+    /* justify-content: center;
+    align-items: center; */
 }
