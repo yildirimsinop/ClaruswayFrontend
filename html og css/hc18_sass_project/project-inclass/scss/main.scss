@@ -1,11 +1,10 @@
+// main 
 @import "./base/reset";
-@import "./abstracts/variables", "./abstracts/mixin";
+@import "./abstracts/_variables.scss","./abstracts/mixin";//değişkenlerim ve fonksiyonlarım
 
-//import sirasi onemlidir. Ortak olan dosyalara her yerden erisim saglayabilmemiz 
-//icin oncelikle ortak dosylari import etmemiz gerekiyor.
-
-@import "./components/footer", "./components/navbar","./components/responsive";
-@import "./sections/about", "./sections/destination", "./sections/quide", "./sections/home.scss"; 
+// import sırası önemlidir. Ortak olan dosylara her yerden erişim sağlayabilmemiz i,çin öncelikle ortak dosyları import etmemiz gerekiyor.
+@import "./components/footer","./components/navbar","./components/responsive";
+@import "./sections/home","./sections/about","./sections/destination","./sections/guide";
 
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Inter&family=Mulish&family=Playfair+Display&family=Rampart+One&display=swap");
@@ -14,9 +13,8 @@
 body {
     background-color: $mainColor;
     position: relative;
-
 }
 
-button, i {
+button,i {
     cursor: pointer;
 }
