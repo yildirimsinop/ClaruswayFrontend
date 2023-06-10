@@ -61,6 +61,16 @@
   color: #ffffff;
 }
 
+.home {
+  margin: 1rem auto;
+  width: 90%;
+  min-height: 40vh;
+  gap: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 body {
   background-color: #ffffff;
   position: relative;
