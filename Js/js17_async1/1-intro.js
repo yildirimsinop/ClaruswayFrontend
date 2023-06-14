@@ -19,4 +19,28 @@
 //* Senkron
 //* ------------------------------------------------
 
-console.log("ASYNC INTRO")
+// const delay = (waitingTime) => {
+//     const startTime = new Date().getTime ()
+    
+//     while (new Date ().getTime() < startTime + waitingTime) {}
+    
+// }
+
+// console.timeEnd ("gecikme");
+// console.log("Hello")
+
+// // alert("blokked") //? Blocking 
+
+// delay (4000)
+// console.log("hi");
+
+//* ASenkron
+//* ------------------------------------------------
+
+console.log("start");
+
+setTimeout(() => {
+    console.log("Data fetched");
+}, 0)
+
+console.log("start");
