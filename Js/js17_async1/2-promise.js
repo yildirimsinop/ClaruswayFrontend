@@ -31,3 +31,18 @@
 //? Zincirleme olarak kullanilabilirler.
 
 console.log("Promise")
+
+const networkReq = new Promise ((resolve, reject) => {
+    const data = { a: 1, b: 2}
+
+    const success = Math.floor(Math.random()*5) //?0,1,2,3,4
+
+    if (success) {
+        console.log("Data fetched");
+        resolve(data)
+    } else {
+        reject("Ohh no there is network error")
+    }
+})
+
+networkReq.then ( (response) => console.log(response)).catch((err) => document.write(err))
