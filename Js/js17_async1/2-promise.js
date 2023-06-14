@@ -47,3 +47,18 @@ networkReq
   .then((response) => console.log(response))
   .then(() => console.log("2. then"))
   .catch((err) => document.write(err))
+  .finally(() => console.log("Her zaman calisir"))
+
+//? Alternatif olarak hatayı handle etmek icin try-catch blogu da kullanılabilir.
+
+// try {
+//   networkReq
+//     .then((response) => console.log(response))
+//     .then(() => console.log("2. then"))
+// } catch (err) {
+//   document.write(err)
+// } finally {
+//   console.log("Her zaman calisir")
+// }
+
+// console.log(networkReq)
