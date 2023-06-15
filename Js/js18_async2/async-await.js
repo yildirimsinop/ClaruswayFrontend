@@ -19,12 +19,13 @@
 //* Yapilan istek yerine getirilip sonuc degerlerinin dondurulmesi ile kodun calismasi devam eder.
 
 const getNews = async () => {
-    const API_KEY = "a0e34d92a9254bf5b5dcfce800843c0c"
+    const API_KEY = "1a1a999e0d7240a6bd2dead87bcca78e"
   
-    const URL = `https://newsapi.org/v2/top-headlines?country=tr&apiKey=${API_KEY}`
+    const URL = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`
   
     try {
       const res = await fetch(URL)
+      console.log(res)
       //?Error handling
       if (!res.ok) {
         throw new Error("News can not be fetched")
@@ -48,9 +49,22 @@ const getNews = async () => {
   const renderNews = (news) => {
     console.log(news)
     const newsDiv = document.getElementById("news")
-
-    news.map ((item) => {
-        newsDiv.innerHTML += ``;
+  
+    news.map((item) => {
+      const { title, description, content, url, urlToImage } = item //? destructure
+      newsDiv.innerHTML += `
+      <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card">
+              <img src="${urlToImage}" class="card-img-top" alt="...">
+              <div class="card-body">
+                  <h5 class="card-title">${title}</h5>
+                  <p class="card-text">${content}</p>
+                  <a href="${url}" target="_blank" class="btn btn-danger">Go Detail</a>
+              </div>
+          </div>
+      </div>
+      
+      `
     })
   }
   
