@@ -19,36 +19,42 @@
 //* Yapilan istek yerine getirilip sonuc degerlerinin dondurulmesi ile kodun calismasi devam eder.
 
 const getNews = async () => {
-
     const API_KEY = "a0e34d92a9254bf5b5dcfce800843c0c"
-
-    
-     const URL = `https://newsapi.org/v2/top-headlines?country=tr&apiKey=${API_KEY}` 
-
-
-     try {
-         const res = await fetch (URL)
-
-         //?Error handling
-         if(!res.ok) {
-            throw new Error ("News can not be fetched")
-         }
-         const data = await res.json()
-         renderNews (data.articles)
-        
-     } catch (error) {
-        console.log(error);
-        renderError()
-     }
-
+  
+    const URL = `https://newsapi.org/v2/top-headlines?country=tr&apiKey=${API_KEY}`
+  
+    try {
+      const res = await fetch(URL)
+      //?Error handling
+      if (!res.ok) {
+        throw new Error("News can not be fetched")
+      }
+      const data = await res.json()
+      renderNews(data.articles)
+    } catch (err) {
+      // console.log(error)
+      renderError(err)
     }
-    const renderNews = (news) => {
-        const newsDiv = document.getElementById("news")
-       newsDiv.innerHTML = `<img src= "./img/404.png" alt= "404"`
-       
+  }
+  
+  const renderError = (err) => {
+    const newsDiv = document.getElementById("news")
+    newsDiv.innerHTML = `
+      <h3>${err}</h3>
+      <img src="./img/404.png" alt="404" />
+    `
+  }
+  
+  const renderNews = (news) => {
+    console.log(news)
+    const newsDiv = document.getElementById("news")
 
-}
-window.addEventListener("load", () =>{
+    news.map ((item) => {
+        newsDiv.innerHTML += ``;
+    })
+  }
+  
+  window.addEventListener("load", () => {
     getNews()
-
-})
+  })
+  
