@@ -38,11 +38,14 @@ const getNews = async () => {
         
      } catch (error) {
         console.log(error);
+        renderError()
      }
 
     }
     const renderNews = (news) => {
-       console.log(news);
+        const newsDiv = document.getElementById("news")
+       newsDiv.innerHTML = `<img src= "./img/404.png" alt= "404"`
+       
 
 }
 window.addEventListener("load", () =>{
