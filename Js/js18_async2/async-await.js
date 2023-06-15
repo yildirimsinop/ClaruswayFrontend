@@ -18,3 +18,34 @@
 //* satirdaki kodun durdurulmasini saglar.
 //* Yapilan istek yerine getirilip sonuc degerlerinin dondurulmesi ile kodun calismasi devam eder.
 
+const getNews = async () => {
+
+    const API_KEY = "a0e34d92a9254bf5b5dcfce800843c0c"
+
+    
+     const URL = `https://newsapi.org/v2/top-headlines?country=tr&apiKey=${API_KEY}` 
+
+
+     try {
+         const res = await fetch (URL)
+
+         //?Error handling
+         if(!res.ok) {
+            throw new Error ("News can not be fetched")
+         }
+         const data = await res.json()
+         renderNews (data.articles)
+        
+     } catch (error) {
+        console.log(error);
+     }
+
+    }
+    const renderNews = (news) => {
+       console.log(news);
+
+}
+window.addEventListener("load", () =>{
+    getNews()
+
+})
