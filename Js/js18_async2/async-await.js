@@ -63,11 +63,9 @@ const getNews = async () => {
               </div>
           </div>
       </div>
-      
       `
     })
   }
-  
   window.addEventListener("load", () => {
     getNews()
   })
