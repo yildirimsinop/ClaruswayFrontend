@@ -1,21 +1,31 @@
 console.log("JS Modules is running")
 
-console.log(window);
+console.log(window)
 
-//? Module kullaniminda this objesi window nesnesini gostermez.
-console.log(this); //? undefined
+//? Module kullanıminda this objesi window nesnesini gostermez
+console.log(this) //? undefined
 
 //? named export (import)
-import {CALISMA_SAATI, maas} from "./mymodule.js" 
-import {arttir, azalt} from "./mymodule.js" 
+import { CALISMA_SAATI, maas } from "./mymodule.js"
+// import { arttir , azalt } from "./mymodule.js"
+import { arttir as inc, azalt as dec } from "./mymodule.js"
 
-console.log(CALISMA_SAATI);
-console.log(maas);
+//? Bazen farkli modullerden ayni elemanlari import etmemiz gerekebilir. Bunun için as ile isim değişikliği yapmak mantıklı olacaktir.
+// import { Button } from "react-boostrap"
+// import { Button as TailwindBtn } from "tailwind"
 
-console.log(arttir(5));
-console.log(azalt(15));
+//? export default (Süslü kullanilmaz)
+// import selamVer from "./mymodule.js"
+import mesajVer from "./mymodule.js"
 
-//? export default
-import selamVer from "./mymodule.js";
+console.log(CALISMA_SAATI)
+console.log(maas)
 
-selamVer()
+// console.log(arttir(5))
+// console.log(azalt(5))
+
+console.log(inc(5))
+console.log(dec(5))
+
+// selamVer()
+mesajVer()
