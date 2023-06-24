@@ -10,6 +10,10 @@
 //* Module CSS, Material UI, Styled Component, Sass, Bootstrap, Tailwind, Emotion, Ant Design v.b harici kutuphaneler kullanilabilir.
 import "./Content.css"
 
+// ? Dahili bir resim eklemek icin import yapmak gereklidir.
+// ? ancak public klasöründeki resimler importsuz bir şekilde
+//? erisilebilir.
+import birdBlue from "./img/bird-blue.jpeg"
 
 const Content = () => {
   //? Local style objesi (Harici bir dosyadan da import edilebilir)
@@ -43,6 +47,12 @@ const Content = () => {
         src="https://cdn.pixabay.com/photo/2015/11/03/10/23/watercolor-1020509_640.jpg"
         alt=""
       />
+
+      {/* <img src="./img/bird-blue.jpeg" alt="bird-blue" /> */}
+      <img src={birdBlue} alt="bird-blue" />
+
+      {/* public klasorunde bulunan bir resime dogrudan ana dizinmis gibi yol ile erisilebilir. import gerek yoktur  */}
+      <img src="./assets/dandelion.jpeg" alt="dandelion" />
 
       <p style={parStyle}>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, illum.
