@@ -10,6 +10,12 @@
     text-decoration: underline;
     letter-spacing: 0.2rem;
     animation: flicker 0.5s ease-in-out infinite alternate;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+      color: $cardNavBgColor;
+      cursor: pointer;
+    }
   }
   @keyframes flicker {
     0% {
