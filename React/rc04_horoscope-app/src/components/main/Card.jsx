@@ -1,19 +1,22 @@
-const Card = ({ title, date, image, desc }) => {
-  //   console.log("ne geliyor", props);
-  //   const { title, date, image, desc } = props;
-  return (
+const Card = (props) => {
+  console.log("nedir", props)
+  return(
     <div className="cards">
       <div className="title">
-        <h1>{title}</h1>
+        <h1>props.title</h1>
+
       </div>
       <div className="date">
-        <h2>{date}</h2>
+        <h2>date</h2>
       </div>
-      <img src={image} alt="" />
+      <img src="" alt="" />
       <div className="card-over">
-        <p>{desc}</p>
+        <p>dexcription</p>
+
       </div>
+
     </div>
-  );
-};
+  )
+}
+
 export default Card;
