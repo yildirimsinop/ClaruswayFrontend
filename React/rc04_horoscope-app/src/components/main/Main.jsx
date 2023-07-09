@@ -3,8 +3,8 @@ import Card from "./Card";
 const Main = () => {
   return(
     <div className="card-container">
-      {data.map(()=> (
-      <Card {...item}/>
+      {data.map((item)=> (
+      <Card key= {item.id} {...item}/>
       ))}
     </div>
   )

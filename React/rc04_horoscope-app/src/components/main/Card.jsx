@@ -1,5 +1,6 @@
-const Card = (props) => {
-  console.log("nedir", props)
+const Card = ({title, date, image, desc}) => {
+  // console.log("nedir", props)
+  // const {title, date, mage, desc} = props;
   return(
     <div className="cards">
       <div className="title">
