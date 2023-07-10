@@ -1,7 +1,14 @@
-const Events = () => {
+//? ReactJS, Tarayicilar arasi uyumluluk ve performans artisi gibi
+//? sebeplerden oturu Sentetik Event olarak adilandirilan Olaylari
+//? kullanir. Sentetik Event, aslinda tarayicinin dogal event'larinin
+//? bir sarmalayici (Wrapper) arabirimle ortulmesi ile olusur. Bu sayede,
+//? React ortaminda kullanilan event'larin bilindik tarayicilarda
+//? sorunsuz calismasini saglanir.
 
-  const handleClick = () => {
+const Events = () => {
+  const handleClick = (e) => {
     alert("Hi")
+    console.log(e)
   }
   return (
     <div>
@@ -13,12 +20,6 @@ const Events = () => {
 export default Events
 
 
-// //? ReactJS, Tarayicilar arasi uyumluluk ve performans artisi gibi
-// //? sebeplerden oturu Sentetik Event olarak adilandirilan Olaylari
-// //? kullanir. Sentetik Event, aslinda tarayicinin dogal event'larinin
-// //? bir sarmalayici (Wrapper) arabirimle ortulmesi ile olusur. Bu sayede,
-// //? React ortaminda kullanilan event'larin bilindik tarayicilarda
-// //? sorunsuz calismasini saglanir.
 
 // const Events = () => {
 //   let message = "EVENT"
