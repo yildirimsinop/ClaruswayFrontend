@@ -6,13 +6,28 @@
 //? sorunsuz calismasini saglanir.
 
 const Events = () => {
+
+  let message = "EVENTS"
   const handleClick = (e) => {
     alert("Hi")
     console.log(e)
+    console.log(e.target)
+  }
+
+  const handleChange = (e) => {
+    console.log(e.target)
+    message = "STATE"
   }
   return (
     <div>
+      <h1>{message}</h1>
+
       <button onClick={handleClick}>Click</button>
+
+      {/* Eger bir event fonksiyonunun paremetresi olmasi gerekiyorsa bu fonksiyon bir arrow fonks. tarafindan  cagrilmalidir. Aksi takdirde event fonksiyonu event gerceklesmeden cagirilir */}
+
+      <button onClick={() => alert ("Deneme")}>Save</button>
+      <button onClick={handleChange}>Change</button>
     </div>
   )
 }
@@ -41,9 +56,7 @@ export default Events
 //       <h1>{message}</h1>
 //       <button onClick={handleClick}>Click</button>
 
-//       {/* Eger bir event fonksiyonunun paremetresi olmasi gerekiyorsa
-//       bu fonksiyon bir arrow fonks. tarafindan  cagrilmalidir. Aksi
-//       takdirde event fonksiyonu event gerceklesmeden cagirilir */}
+
 //       <button onClick={() => alert("Deneme")}>Save</button>
 
 //       <button onClick={handleChange}>Change</button>
