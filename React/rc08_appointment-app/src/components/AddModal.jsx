@@ -19,7 +19,7 @@ function AddModal({ show, handleClose, apps, setApps, drName }) {
         doctor: drName,
       },
     ]);
-
+    setName("");
     handleClose();
   };
   return (
@@ -37,6 +37,7 @@ function AddModal({ show, handleClose, apps, setApps, drName }) {
                 placeholder="Enter name"
                 onChange={(e) => setName(e.target.value)}
                 value={name}
+                required
               />
             </Form.Group>
 
@@ -47,6 +48,7 @@ function AddModal({ show, handleClose, apps, setApps, drName }) {
                 placeholder="Date"
                 onChange={(e) => setDate(e.target.value)}
                 value={date}
+                required
               />
             </Form.Group>
 
