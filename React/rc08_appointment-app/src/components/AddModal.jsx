@@ -7,7 +7,10 @@ function AddModal({ show, handleClose }) {
   const [name, setName] = useState("");
   const [date, setDate] = useState(new Date().toISOString().slice(0, 10));
 
-  console.log(name, date);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    handleClose();
+  };
   return (
     <>
       <Modal show={show} onHide={handleClose}>
@@ -15,7 +18,7 @@ function AddModal({ show, handleClose }) {
           <Modal.Title>Appointment for ...</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Form>
+          <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Patient Name</Form.Label>
               <Form.Control
