@@ -3,23 +3,34 @@ import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 import { useState } from "react";
 
-function AddModal({ show, handleClose }) {
+function AddModal({ show, handleClose, apps, setApps, drName }) {
   const [name, setName] = useState("");
   const [date, setDate] = useState(new Date().toISOString().slice(0, 10));
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setApps([
+      ...apps,
+      {
+        id: apps.length + 1,
+        patient: name,
+        day: date,
+        consulted: false,
+        doctor: drName,
+      },
+    ]);
+
     handleClose();
   };
   return (
     <>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Appointment for ...</Modal.Title>
+          <Modal.Title>Appointment for {drName}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form onSubmit={handleSubmit}>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Group className="mb-3" controlId="name">
               <Form.Label>Patient Name</Form.Label>
               <Form.Control
                 type="text"
@@ -27,12 +38,9 @@ function AddModal({ show, handleClose }) {
                 onChange={(e) => setName(e.target.value)}
                 value={name}
               />
-              <Form.Text className="text-muted">
-                We'll never share your email with anyone else.
-              </Form.Text>
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Group className="mb-3" controlId="date">
               <Form.Label>Date</Form.Label>
               <Form.Control
                 type="date"
@@ -41,6 +49,7 @@ function AddModal({ show, handleClose }) {
                 value={date}
               />
             </Form.Group>
+
             <div className="text-center">
               <Button variant="success" type="submit" className="me-2">
                 Save
