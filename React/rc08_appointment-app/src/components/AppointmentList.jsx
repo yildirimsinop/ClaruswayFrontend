@@ -7,7 +7,7 @@ const AppointmentList = ({ apps, setApps }) => {
   console.log(apps);
 
   const handleDelete = (id) => {
-    setApps([]);
+    setApps();
   };
   return (
     <Container className="p-2">
@@ -32,7 +32,7 @@ const AppointmentList = ({ apps, setApps }) => {
               <TiDelete
                 className="text-danger fs-1"
                 type="button"
-                onClick={hanleDelete}
+                onClick={() => handleDelete(id)}
               />
             </Col>
           </Row>
