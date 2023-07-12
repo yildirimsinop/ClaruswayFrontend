@@ -1,8 +1,13 @@
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
+import { useState } from "react";
 
 function AddModal({ show, handleClose }) {
+  const [name, setName] = useState("");
+  const [date, setDate] = useState(new Date().toLocaleDateString(""));
+
+  console.log(name, date);
   return (
     <>
       <Modal show={show} onHide={handleClose}>
@@ -13,7 +18,12 @@ function AddModal({ show, handleClose }) {
           <Form>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Patient Name</Form.Label>
-              <Form.Control type="text" placeholder="Enter name" />
+              <Form.Control
+                type="text"
+                placeholder="Enter name"
+                onChange={(e) => setName(e.target.value)}
+                value={name}
+              />
               <Form.Text className="text-muted">
                 We'll never share your email with anyone else.
               </Form.Text>
@@ -21,7 +31,12 @@ function AddModal({ show, handleClose }) {
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Date</Form.Label>
-              <Form.Control type="date" placeholder="Date" />
+              <Form.Control
+                type="date"
+                placeholder="Date"
+                onChange={(e) => setDate(e.target.value)}
+                value={date}
+              />
             </Form.Group>
             <div className="text-center">
               <Button variant="success" type="submit" className="me-2">
