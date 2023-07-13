@@ -17,7 +17,12 @@ const User = () => {
     //   .then((res) => res.json())
     //   .then((data) => setUserData(data.results[0]))
     //   .catch((err) => console.log(err))
+    const timer = setInterval(getUser, 3000);
     getUser();
+
+    return () => {
+      clearInterval(timer);
+    };
   }, []);
 
   console.log(userData);
