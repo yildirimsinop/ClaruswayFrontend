@@ -5,16 +5,19 @@ import axios from "axios";
 
 const Home = () => {
   const [tutorials, setTutorials] = useState([]);
-  const BASE_URL = "https://tutorial-api.fullstack.clarusway.com/tutorials/";
 
   const getTutorials = async () => {
+    const BASE_URL = "https://tutorial-api.fullstack.clarusway.com/tutorials/";
     try {
-      const data = await axios(BASE_URL);
-      setTutorials(data.data);
+      // const res = await axios(BASE_URL)
+      // setTutorials(res.data)
+      const { data } = await axios(BASE_URL);
+      setTutorials(data);
     } catch (error) {
       console.log(error);
     }
   };
+
   console.log(tutorials);
 
   //? Mount asamasinda api'ye istek atiyoruz
@@ -24,8 +27,8 @@ const Home = () => {
 
   return (
     <>
-      <AddTutorial />
-      <TutorialList tutorials={tutorials} />
+      <AddTutorial getTutorials={getTutorials} />
+      <TutorialList tutorials={tutorials} getTutorials={getTutorials} />
     </>
   );
 };
