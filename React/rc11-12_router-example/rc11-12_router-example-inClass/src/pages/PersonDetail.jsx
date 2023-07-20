@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
-import { useEffect, useState } from "react";
-
 const PersonDetail = () => {
-  let { state: person } = useLocation();
+  //! navigate ile gonderilen state'i yakalamak icin useLocation Hook'u kullanilabilir.
+  //! Bu durumda veri, state ile geldigi icin yeniden fetch yapilmasina gerek kalmaz
+  // let { state: person } = useLocation();
   let navigate = useNavigate();
+  // console.log(person);
+  //! Linkteki parametreyi almak icin useParams Hook'u kullanilabilir.
   let { id } = useParams();
   console.log({ id });
   const [person, setPerson] = useState({});
