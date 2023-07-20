@@ -15,7 +15,11 @@ const AppRouter = () => {
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/paths" element={<Paths />} />
+        <Route path="/paths" element={<Paths />}>
+          <Route path="fullstack" element = {<Fullstack/>} />
+        </Route>
+          <Route path="aws" element = {<Aws/>} />
+        </Route>
         <Route path="/people" element={<People />} />
         <Route path="/people/:id" element={<PersonDetail />} />
         <Route path="/contact" element={<Contact />} />
