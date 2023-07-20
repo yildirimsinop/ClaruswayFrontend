@@ -8,6 +8,8 @@ import PersonDetail from "../pages/PersonDetail";
 import Contact from "../pages/Contact";
 import NotFound from "../pages/NotFound";
 import Footer from "../components/Footer";
+import Fullstack from "../pages/Fullstack"; // İlgili component'in import edildiğini varsayıyorum
+import Aws from "../pages/Aws"; // İlgili component'in import edildiğini varsayıyorum
 
 const AppRouter = () => {
   return (
@@ -16,9 +18,8 @@ const AppRouter = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/paths" element={<Paths />}>
-          <Route path="fullstack" element = {<Fullstack/>} />
-        </Route>
-          <Route path="aws" element = {<Aws/>} />
+          <Route path="fullstack" element={<Fullstack />} />
+          <Route path="aws" element={<Aws />} />
         </Route>
         <Route path="/people" element={<People />} />
         <Route path="/people/:id" element={<PersonDetail />} />
