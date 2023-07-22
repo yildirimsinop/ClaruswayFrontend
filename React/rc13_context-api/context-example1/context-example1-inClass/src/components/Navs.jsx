@@ -1,18 +1,17 @@
-import { Link } from "react-router-dom";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import Image from "react-bootstrap/Image";
-import { useContext } from "react";
-import { LoginContext } from "../context/loginContext";
+import { Link } from "react-router-dom"
+import Container from "react-bootstrap/Container"
+import Nav from "react-bootstrap/Nav"
+import Navbar from "react-bootstrap/Navbar"
+import Image from "react-bootstrap/Image"
+import { useContext } from "react"
+import { LoginContext } from "../context/LoginContext"
 
 function Navs() {
-  //! cONSUMING LOGIN CONTEXT
-
-  const { user, setUser } = useContext(LoginContext);
+  // ! Consuming login context
+  const { user, setUser } = useContext(LoginContext)
 
   return (
-    <Navbar expand="md">
+    <Navbar expand="sm">
       <Container>
         <Navbar.Brand>
           <Link className="nav-link" to="/">
@@ -53,7 +52,7 @@ function Navs() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
-  );
+  )
 }
 
-export default Navs;
+export default Navs
