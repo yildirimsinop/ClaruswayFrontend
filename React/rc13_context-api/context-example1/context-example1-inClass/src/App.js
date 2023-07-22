@@ -13,6 +13,8 @@ function App() {
   //!Local State
 
   const [user, setUser] = useState({ email: "", password: "" });
+
+  console.log(user);
   return (
     <LoginContext.Provider value={{ user, setUser }}>
       <BrowserRouter>
@@ -22,8 +24,10 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="login" element={<Login />} />
 
-          <Route path="people" element={<People />} />
-          <Route path="people/:id" element={<PersonDetail />} />
+          <Route path="people" element={<PrivateRouter />}>
+            <Route path="people" element={<People />} />
+            {/* <Route path="people/:id" element={<PersonDetail />} /> */}
+          </Route>
 
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
