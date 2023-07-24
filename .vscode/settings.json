@@ -1,4 +1,5 @@
 {
     "interactiveSession.editor.wordWrap": "on",
-    "diffEditor.wordWrap": "inherit"
+    "diffEditor.wordWrap": "inherit",
+    "git.ignoreLimitWarning": true
 }
