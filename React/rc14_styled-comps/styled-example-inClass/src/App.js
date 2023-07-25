@@ -1,7 +1,31 @@
+import Header from "./components/Header";
+import Nav from "./components/Nav";
+import Container from "./components/styled/Container";
+import { GlobalStyle } from "./components/styled/GlobalStyle";
+
+import { ThemeProvider } from "styled-components";
 const App = () => {
+  const styles = {
+    colors: {
+      primary: "#eee",
+      secondary: "#bebe",
+    },
+
+    breakpoints: {
+      xs: "300px",
+      sm: "500px",
+      md: "700px",
+    },
+  };
   return (
     <>
-      <h1>APP</h1>
+      <ThemeProvider theme={styles}>
+        <GlobalStyle />
+        <Nav />
+        <Container>
+          <Header />
+        </Container>
+      </ThemeProvider>
     </>
   );
 };
