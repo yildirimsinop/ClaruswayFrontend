@@ -1,4 +1,5 @@
 import Header from "./components/Header";
+// eslint-disable-next-line
 import Nav from "./components/Nav";
 import Container from "./components/styled/Container";
 import { GlobalStyle } from "./components/styled/GlobalStyle";
