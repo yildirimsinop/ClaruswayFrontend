@@ -17,27 +17,27 @@
 //*    (Custom hook'lar icerisinde bir hook cagrilabilir)
 //?    https://react.dev/reference/react
 //* =============================================================
-import { useState, useEffect, useContext, useReducer } from "react";
+import { useState, useEffect, useContext, useReducer } from "react"
 
 const UseStateCounter = () => {
   //   let count = 0
 
   //! count adinda bir state tanimlamis olduk ve baslangic degerine 0 atadik.
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0)
 
   const handleInc = () => {
     // count = count + 1
     //! Bir state'in degeri sadece setter metodu ile olabilir.
-    setCount(count + 1);
-  };
+    setCount(count + 1)
+  }
 
   const handleDec = () => {
     if (count <= 0) {
-      alert("count can not be less than 0");
+      alert("count can not be less than 0")
     } else {
-      setCount(count - 1);
+      setCount(count - 1)
     }
-  };
+  }
 
   return (
     <div>
@@ -51,7 +51,7 @@ const UseStateCounter = () => {
       {/* <button onClick={handleDec}>DEC</button> */}
       <button onClick={() => count > 0 && setCount(count - 1)}>DEC</button>
     </div>
-  );
-};
+  )
+}
 
-export default UseStateCounter;
+export default UseStateCounter

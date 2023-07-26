@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from "react"
 
 //?===============================================
 //?                USEEFFECT HOOK
@@ -43,7 +43,7 @@ import { useState, useEffect } from "react";
 //   }, [count]) //? Dependency Array
 
 const UseEffectHook = () => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0)
 
   //!   ComponentDidMount
   //   useEffect(() => {
@@ -64,21 +64,21 @@ const UseEffectHook = () => {
 
   //! ComponentWillUnmount
   const fetchData = () => {
-    console.log("Data Fetch started");
-  };
+    console.log("Data Fetch started")
+  }
   useEffect(() => {
-    const timer = setInterval(fetchData, 1000);
+    const timer = setInterval(fetchData, 1000)
 
     return () => {
-      clearInterval(timer);
-      console.log("componentWillUnmount");
-    };
-  }, []);
+      clearInterval(timer)
+      console.log("componentWillUnmount")
+    }
+  }, [])
 
   const handleInc = () => {
-    setCount(count + 1);
-  };
-  console.log("render");
+    setCount(count + 1)
+  }
+  console.log("render")
   return (
     <div className="container text-center">
       <h1 className="text-danger">USEEFFECT</h1>
@@ -87,7 +87,7 @@ const UseEffectHook = () => {
         INC
       </button>
     </div>
-  );
-};
+  )
+}
 
-export default UseEffectHook;
+export default UseEffectHook

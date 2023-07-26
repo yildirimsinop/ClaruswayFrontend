@@ -1,8 +1,8 @@
-import Card from "./components/card/Card";
-import data from "./data";
+import Card from "./components/card/Card"
+import data from "./data"
 
 function App() {
-  console.log(data);
+  console.log(data)
   return (
     <>
       <h1>LANGUAGES</h1>
@@ -25,7 +25,7 @@ function App() {
         btn={data[1].btnName}
       /> */}
     </>
-  );
+  )
 }
 
-export default App;
+export default App

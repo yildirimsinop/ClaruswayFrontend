@@ -1,7 +1,7 @@
 // import LifeCycleMethods from "./components/LifeCycleMethods"
 // import { useState } from "react"
 // import UseEffectHook from "./components/UseEffectHook"
-import User from "./components/User";
+import User from "./components/User"
 
 function App() {
   // const [visible, setVisible] = useState(false)
@@ -17,7 +17,7 @@ function App() {
 
       <User />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

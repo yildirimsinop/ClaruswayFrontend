@@ -1,31 +1,33 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react"
 
 const User = () => {
   // let userData = "deneme"
 
-  const [userData, setUserData] = useState();
+  const [userData, setUserData] = useState()
 
   const getUser = () => {
     fetch("https://randomuser.me/api")
       .then((res) => res.json())
       .then((data) => setUserData(data.results[0]))
-      .catch((err) => console.log(err));
-  };
+      .catch((err) => console.log(err))
+  }
 
   useEffect(() => {
     // fetch("https://randomuser.me/api")
     //   .then((res) => res.json())
     //   .then((data) => setUserData(data.results[0]))
     //   .catch((err) => console.log(err))
-    const timer = setInterval(getUser, 3000);
-    getUser();
+    //! ComponentDidMount
+    const timer = setInterval(getUser, 3000)
+    getUser()
 
+    //! ComponentWillUnMount
     return () => {
-      clearInterval(timer);
-    };
-  }, []);
+      clearInterval(timer)
+    }
+  }, [])
 
-  console.log(userData);
+  console.log(userData)
   return (
     <div>
       {/* Optional Chaining */}
@@ -43,7 +45,7 @@ const User = () => {
         Get Random User
       </button>
     </div>
-  );
-};
+  )
+}
 
-export default User;
+export default User

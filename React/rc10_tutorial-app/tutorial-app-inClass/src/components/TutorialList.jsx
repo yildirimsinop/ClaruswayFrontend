@@ -1,13 +1,13 @@
-import { FaEdit } from "react-icons/fa";
-import { AiFillDelete } from "react-icons/ai";
-import axios from "axios";
-import EditTutorial from "./EditTutorial";
-import { useState } from "react";
+import { FaEdit } from "react-icons/fa"
+import { AiFillDelete } from "react-icons/ai"
+import axios from "axios"
+import EditTutorial from "./EditTutorial"
+import { useState } from "react"
 
 const TutorialList = ({ tutorials, getTutorials }) => {
-  const [editItem, setEditItem] = useState("");
+  const [editItem, setEditItem] = useState("")
 
-  console.log(editItem);
+  console.log(editItem)
   // const tutorials = [
   //   {
   //     id: 1,
@@ -25,25 +25,25 @@ const TutorialList = ({ tutorials, getTutorials }) => {
   //     description: "JS library for UI design",
   //   },
   // ]
-  const BASE_URL = "https://tutorial-api.fullstack.clarusway.com/tutorials";
+  const BASE_URL = "https://tutorial-api.fullstack.clarusway.com/tutorials"
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`${BASE_URL}/${id}/`);
+      await axios.delete(`${BASE_URL}/${id}/`)
     } catch (error) {
-      console.log(error);
+      console.log(error)
     }
-    getTutorials();
-  };
+    getTutorials()
+  }
 
-  const editTutor = async (tutor) => {
-    try {
-      await axios.put(`${BASE_URL}/${tutor.id}/`, tutor);
-    } catch (error) {
-      console.log(error);
-    }
-    getTutorials();
-  };
+  // const editTutor = async (tutor) => {
+  //   try {
+  //     await axios.put(`${BASE_URL}/${tutor.id}/`, tutor)
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+  //   getTutorials()
+  // }
 
   return (
     <div className="container mt-4">
@@ -59,7 +59,7 @@ const TutorialList = ({ tutorials, getTutorials }) => {
           </tr>
         </thead>
         <tbody>
-          {tutorials?.map((item) => {
+          {tutorials?.map(item => {
             const { id, title, description } = item;
             return (
               <tr key={id}>
@@ -96,9 +96,9 @@ const TutorialList = ({ tutorials, getTutorials }) => {
         </tbody>
       </table>
 
-      <EditTutorial editItem={editItem} />
+      <EditTutorial editItem={editItem} getTutorials={getTutorials} />
     </div>
   );
-};
+}
 
-export default TutorialList;
+export default TutorialList

@@ -1,15 +1,21 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-const Login = () => {
+const Login = ({ setUser }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const hanlesubmit = (e) => {
+  let navigate = useNavigate();
+
+  const handleSubmit = (e) => {
     e.preventDefault();
+    setUser({ email, password });
+    sessionStorage.setItem("user", JSON.stringify({ email, password }));
+    navigate("/");
     console.log(email, password);
   };
   return (
     <div className="container mt-4">
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="exampleInputEmail1" className="form-label">
             Email address
@@ -30,6 +36,7 @@ const Login = () => {
             type="password"
             className="form-control"
             id="exampleInputPassword1"
+            onChange={(e) => setPassword(e.target.value)}
           />
         </div>
 

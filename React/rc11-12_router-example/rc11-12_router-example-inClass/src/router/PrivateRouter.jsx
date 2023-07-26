@@ -5,8 +5,8 @@ import { Navigate, Outlet } from "react-router-dom";
 //? bir baska linke yonledirilmesi icin kullanilabilir. (v5 -> Redirect)
 //? Navigate, Component seviyesi Routing icin kullanilir.
 
-const PrivateRouter = () => {
-  const user = true;
+const PrivateRouter = ({ user }) => {
+  // const user = true;
   return user ? <Outlet /> : <Navigate to="/login" />;
 };
 

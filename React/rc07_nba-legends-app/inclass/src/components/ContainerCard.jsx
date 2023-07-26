@@ -1,26 +1,25 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 // import Col from "react-bootstrap/Col";
-import { data } from "../helpers/data";
-import PlayerCard from "./PlayerCard";
+import {data} from "../helpers/data";
+import PlayerCard from './PlayerCard';
 
 const ContainerCard = () => {
-  const [search, setSearch] = useState("");
-  console.log(data);
-  const handleChange = (e) => {
-    console.log(e.target.value);
-    setSearch(e.target.value); //! setter mtodları asenkron olarak çalışır.
-    // console.log(search)
-  };
-  console.log(search);
+    const [search,setSearch] = useState("")
+    console.log(data)
+    const handleChange = (e) =>{
+        console.log(e.target.value)
+        setSearch(e.target.value) //! setter mtodları asenkron olarak çalışır.
+        // console.log(search)
+        
+    }
+    console.log(search);
 
-  const filteredData = data.filter((item) =>
-    item.name.toLowerCase().includes(search.trim().toLowerCase())
-  );
+    const filteredData = data.filter(item=> item.name.toLowerCase().includes(search.trim().toLowerCase()))
 
-  console.log("filter", filteredData);
+    console.log("filter",filteredData)
 
   return (
     <>
@@ -60,6 +59,6 @@ const ContainerCard = () => {
       </Container>
     </>
   );
-};
+}
 
-export default ContainerCard;
+export default ContainerCard

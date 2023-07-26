@@ -16,7 +16,9 @@ import Login from "../pages/Login";
 import { useState } from "react";
 
 const AppRouter = () => {
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState(
+    JSON.parse(sessionStorage.getItem("user")) || false
+  );
   return (
     <div>
       <Nav />
@@ -30,12 +32,12 @@ const AppRouter = () => {
           </Route>
           <Route path="aws" element={<Aws />} />
         </Route>
-        <Route element={<PrivateRouter />}>
+        <Route element={<PrivateRouter user={user} />}>
           <Route path="/people" element={<People />} />
           <Route path="/people/:id" element={<PersonDetail />} />
         </Route>
         <Route path="/contact" element={<Contact />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Login setUser={setUser} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
