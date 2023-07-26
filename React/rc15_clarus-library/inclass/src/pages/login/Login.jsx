@@ -7,16 +7,27 @@ import {
   StyledForm,
   StyledInput,
 } from "./Login.style";
+import { useAuthContext } from "../../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const { setUser } = useAuthContext();
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setUser(true);
+    navigate(-1);
+  };
+
   return (
     <LoginContainer>
       <FormContainer>
-        <Header>Login Here</Header>
-        <StyledForm>
-          <StyledInput />
-          <StyledInput />
-          <StyledButton>Login</StyledButton>
+        <StyledForm onSubmit={handleSubmit}>
+          <Header>Login Here</Header>
+          <StyledInput type="text" placeholder="Username" required />
+          <StyledInput type="password" placeholder="password" required />
+          <StyledButton type="submit">Login</StyledButton>
         </StyledForm>
       </FormContainer>
     </LoginContainer>
