@@ -1,3 +1,2 @@
 ## DEPLOYED:
-
-yarn https://styled-clarusway.netlify.app/
+https://styled-clarusway.netlify.app/

@@ -1,5 +1,5 @@
-import Button from "./styled/Button";
-import NavStyled from "./styled/NavStyled";
+import Button from "./styled/Button"
+import NavStyled from "./styled/NavStyled"
 
 const Nav = () => {
   return (
@@ -10,10 +10,10 @@ const Nav = () => {
 
       <div>
         <Button>Apply Courses</Button>
-        <Button primary>Talk to Adviser</Button>
+        <Button primary>Talk To Adviser</Button>
       </div>
     </NavStyled>
-  );
-};
+  )
+}
 
-export default Nav;
+export default Nav

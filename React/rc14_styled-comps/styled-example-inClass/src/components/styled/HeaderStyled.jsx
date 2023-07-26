@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 const HeaderStyled = styled.header`
   display: flex;
@@ -11,11 +11,11 @@ const HeaderStyled = styled.header`
   }
 
   & div {
-    flex: 1;
+    flex: 2;
   }
   & img {
     flex: 1;
   }
-`;
+`
 
-export default HeaderStyled;
+export default HeaderStyled

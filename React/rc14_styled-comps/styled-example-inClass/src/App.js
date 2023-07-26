@@ -1,34 +1,30 @@
-import Header from "./components/Header";
-// eslint-disable-next-line
-import Nav from "./components/Nav";
-import Container from "./components/styled/Container";
-import { GlobalStyle } from "./components/styled/GlobalStyle";
+import Header from "./components/Header"
+import Nav from "./components/Nav"
+import Container from "./components/styled/Container"
+import { GlobalStyles } from "./components/styled/GlobalStyles"
 
-import { ThemeProvider } from "styled-components";
+import { ThemeProvider } from "styled-components"
+
 const App = () => {
   const styles = {
     colors: {
-      primary: "#eee",
+      primary: "#bebe",
       secondary: "#bebe",
     },
+    breakpoints: { xs: "300px", sm: "500px", md: "700px" },
+    margin: {},
+    padding: {},
+  }
 
-    breakpoints: {
-      xs: "300px",
-      sm: "500px",
-      md: "700px",
-    },
-  };
   return (
-    <>
-      <ThemeProvider theme={styles}>
-        <GlobalStyle />
-        <Nav />
-        <Container>
-          <Header />
-        </Container>
-      </ThemeProvider>
-    </>
-  );
-};
+    <ThemeProvider theme={styles}>
+      <GlobalStyles />
+      <Nav />
+      <Container>
+        <Header />
+      </Container>
+    </ThemeProvider>
+  )
+}
 
-export default App;
+export default App

@@ -1,11 +1,16 @@
-import { Button, DarkButton } from "./components/Buton.styled";
-import Flex from "./components/Flex";
-import StyledLink from "./components/Links";
-import Title from "./components/Title";
+import { Button, DarkButton, PinkButton } from "./components/Buton.styled"
+import Flex from "./components/Flex"
+import StyledLink from "./components/Links"
+import Title from "./components/Title"
 
 const App = () => {
   return (
     <>
+      <Flex>
+        <StyledLink href="https://www.clarusway.com">Clarusway</StyledLink>
+        <StyledLink react href="https://www.react.dev">React</StyledLink>
+      </Flex>
+
       <Flex bg="#bebe">
         <Title renk="white" bgRenk="red">
           Styled Components
@@ -21,14 +26,11 @@ const App = () => {
       </Flex>
 
       <Flex>
-        <StyledLink href="https:/www.clarusway.com">Clarusway</StyledLink>
-
-        <StyledLink react href="https:/www.react.dev">
-          React
-        </StyledLink>
+        <PinkButton>Pembe</PinkButton>
+        <PinkButton primary>İçi boş</PinkButton>
       </Flex>
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App

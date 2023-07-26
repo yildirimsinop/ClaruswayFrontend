@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 const Button = styled.button`
   background-color: ${({ primary }) => (primary ? "#AF3953" : "white")};
@@ -15,6 +15,6 @@ const Button = styled.button`
     transform: scale(0.97);
     cursor: pointer;
   }
-`;
+`
 
-export default Button;
+export default Button

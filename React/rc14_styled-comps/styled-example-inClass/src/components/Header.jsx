@@ -1,8 +1,6 @@
-import React from "react";
-import Nav from "./Nav";
-import HeaderStyled from "./styled/HeaderStyled";
-import Button from "./styled/Button";
-import Image from "./styled/Image";
+import Button from "./styled/Button"
+import HeaderStyled from "./styled/HeaderStyled"
+import Image from "./styled/Image"
 
 const Header = () => {
   return (
@@ -19,7 +17,7 @@ const Header = () => {
 
       <Image src="./images/hero.jpg" />
     </HeaderStyled>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
