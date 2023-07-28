@@ -75,4 +75,7 @@ export const HeaderButton = styled.button`
   font-size: 2rem;
   border-top-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
+  :hover {
+    background-color: ${({ theme }) => theme.colors.navbarBgColor};
+  }
 `;
