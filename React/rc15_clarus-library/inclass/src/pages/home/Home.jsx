@@ -1,12 +1,16 @@
 import React from "react";
 import Header from "../../components/header/Header";
-import Header from "../../components/card/Card";
+import Card from "../../components/card/Card";
+import { CardContainer, HomeContainer, HomeImage } from "./Home.style";
+import homeImg from "../../assets/books.jpg";
 
 const Home = () => {
   return;
   <HomeContainer>
     <Header />
-    <HomeImage></HomeImage>
+    <HomeImage>
+      <img src="{homeImg}" alt="Home" />
+    </HomeImage>
     <CardContainer>
       <Card />
     </CardContainer>
