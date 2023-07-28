@@ -5,16 +5,16 @@ import { CardContainer, HomeContainer, HomeImage } from "./Home.style";
 import homeImg from "../../assets/books.jpg";
 
 const Home = () => {
-  return;
-  <HomeContainer>
-    <Header />
-    <HomeImage>
-      <img src="{homeImg}" alt="Home" />
-    </HomeImage>
-    <CardContainer>
-      <Card />
-    </CardContainer>
-  </HomeContainer>;
+  return (
+    <HomeContainer>
+      <Header />
+      <HomeImage>
+        <img src={homeImg} alt="Home" />
+      </HomeImage>
+      <CardContainer>
+        <Card />
+      </CardContainer>
+    </HomeContainer>
+  );
 };
-
 export default Home;
