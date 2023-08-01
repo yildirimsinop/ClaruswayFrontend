@@ -1,15 +1,16 @@
 import { Fragment, useContext } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
-import Avatar from "../assets/icons/avatar.png";
+import avatar from "../assets/icons/avatar.png";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 export default function Navbar() {
-  const { logOut } = useContext(AuthContext);
-  const currentUser = { displayName: "felix franko" };
+  const { logOut, currentUser } = useContext(AuthContext);
+  // const currentUser = { displayName: "felix franko" };
   return (
     <>
       <Disclosure
@@ -21,7 +22,7 @@ export default function Navbar() {
             <Link className="pr-2 text-2xl font-semibold" to="/">
               React Movie App
             </Link>
-            <div className="absolute inset-y-0 right-0 flex items-center">
+            <div className="absolute inset-y-0 right-0 flex items-center ">
               {currentUser && (
                 <h5 className="mr-2 capitalize">{currentUser?.displayName}</h5>
               )}
@@ -33,7 +34,7 @@ export default function Navbar() {
                     <span className="sr-only">Open user menu</span>
                     <img
                       className="h-8 w-8 rounded-full"
-                      src={currentUser?.photoURL || Avatar}
+                      src={currentUser?.photoURL || avatar}
                       alt="user"
                     />
                   </Menu.Button>
