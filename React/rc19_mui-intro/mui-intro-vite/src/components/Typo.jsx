@@ -1,5 +1,5 @@
 // import { Typography } from "@mui/material";
-import { Box, Container } from "@mui/material";
+import { Box, Button, Container, Stack } from "@mui/material";
 import Typography from "@mui/material/Typography"; //? Performans acisindan daha mantikli
 
 const Typo = () => {
@@ -30,6 +30,33 @@ const Typo = () => {
           Button TEXT
         </Typography>
       </Box>
+
+      <Stack
+        direction="row"
+        spacing={1}
+        mt={4}
+        justifyContent={"center"}
+        alignItems="center"
+      >
+        <Button variant="outlined" color="primary">
+          Click
+        </Button>
+        <Button variant="contained" color="secondary">
+          Click
+        </Button>
+        <Button variant="contained" color="error">
+          Click
+        </Button>
+        <Button variant="contained" color="success">
+          Click
+        </Button>
+        <Button variant="contained" color="warning">
+          Click
+        </Button>
+        <Button variant="outlined" color="error">
+          Click
+        </Button>
+      </Stack>
     </Container>
   );
 };
