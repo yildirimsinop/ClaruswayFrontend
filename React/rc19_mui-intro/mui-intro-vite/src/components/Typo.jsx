@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography"; //? Performans acisindan daha
 
 const Typo = () => {
   return (
-    <Container maxWidth="sm">
+    <Container maxWidth="md">
       <Box
         sx={{
           padding: "1rem",
