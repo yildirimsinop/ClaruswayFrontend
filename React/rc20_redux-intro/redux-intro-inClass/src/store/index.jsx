@@ -13,9 +13,13 @@ const rootReducer = combineReducers({
   todo: todoReducer,
 });
 
-// export const store = createStore(rootReducer, composeWithDevTools());
+// export const store = createStore(rootReducer, composeWithDevTools())
 
+//? Eger development asamasinda ise devtool aktif olsun aksi takdirde (prod,test vb) aktif olmasin
 export const store = createStore(
   rootReducer,
   process.env.NODE_ENV === "development" && composeWithDevTools()
 );
+
+// process.env.NODE_ENV === "test"
+// process.env.NODE_ENV === "production"
