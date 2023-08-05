@@ -1,7 +1,7 @@
 //? State'lerin baslangic durumlarinin belirlenmesi.
 
 const initialState = {
-  count: 0,
+  count: 10,
 };
 
 //? Pure Function (reducer)
