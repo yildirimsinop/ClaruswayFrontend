@@ -10,7 +10,7 @@ import {
 } from "../../store/counterReducer";
 
 const Counter = () => {
-  const count = useSelector((state) => state.count);
+  const count = useSelector((state) => state.counter);
 
   //? useDispatch custom redux hookudur.
 
