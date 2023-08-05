@@ -1,20 +1,16 @@
-import { useSelector } from "react-redux"
 import TodoItem from "./TodoItem"
+import { useSelector } from "react-redux"
 
 const TodoList = () => {
+  //? *todlistin consume edilmesi
+  const todoList = useSelector((state) => state.todo.todoList)
 
-//? todoListin consume edilmesi
-
-const todoList useSelector((state) => state.todo.todoList)
-
-  const handleClearList = () => {
-    dispatch(clearTodo())
-  }
+  const handleClearList = () => {}
 
   return (
     <div>
       <div>
-        {[todoList]?.map((todo) => (
+        {todoList?.map((todo) => (
           <TodoItem key={todo.id} {...todo} />
         ))}
       </div>
