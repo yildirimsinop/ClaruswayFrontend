@@ -15,10 +15,10 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     //? kullanici bilgileri ile state'i guncelleme istegi
     dispatch(setUser({ email, password }));
     setEmail("");
