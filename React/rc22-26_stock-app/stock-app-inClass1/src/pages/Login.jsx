@@ -9,12 +9,26 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import { Formik, Form } from "formik";
+import { object, string } from "yup";
+import { convertLength } from "@mui/material/styles/cssUtils";
 
 const Login = () => {
   const navigate = useNavigate();
 
   //? harici validasyon şemasi
-  const loginSchema = {};
+  const loginSchema = object({
+    email: string()
+      .email("Lutfen valid bir email giriniz")
+      .required("Bu alan zorunludur"),
+    password: string()
+      .required("Bu alan zorunludur")
+      .min(8, "En az 8 karakter girilmelidir")
+      .max(16, "En fazla 16 karakter girilmelidir")
+      .matches(/\d+/, "En az bir rakam içermelidir.")
+      .matches(/[a-z]/, "En az bir küçük harf içermelidir.")
+      .matches(/[A-Z]/, "En az bir büyük harf içermelidir.")
+      .matches(/[!,?{}><%&$#£+-.]+/, "En az bir özel karekter içermelidir."),
+  });
 
   return (
     <Container maxWidth="lg">
@@ -62,12 +76,9 @@ const Login = () => {
               action.setSubmitting(false);
             }}
           >
-            {({handleChange, handleBlur, values}) => (
+            {({ handleChange, handleBlur, values, touched, errors }) => (
               <Form>
-                <Box
-                  component="form"
-                  sx={{ display: "flex", flexDirection: "column", gap: 2 }}
-                >
+                <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
                   <TextField
                     label="Email"
                     name="email"
@@ -77,8 +88,8 @@ const Login = () => {
                     onChange={handleChange}
                     onBlur={handleBlur}
                     value={values.email}
-                    error={}
-                    helperText={}
+                    error={touched.email && Boolean(errors.email)}
+                    helperText={errors.email}
                   />
                   <TextField
                     label="password"
@@ -86,6 +97,11 @@ const Login = () => {
                     id="password"
                     type="password"
                     variant="outlined"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.password}
+                    error={touched.password && Boolean(errors.password)}
+                    helperText={errors.password}
                   />
                   <Button variant="contained" type="submit">
                     Submit
