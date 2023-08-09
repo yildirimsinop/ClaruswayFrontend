@@ -8,7 +8,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import { Formik } from "formik";
+import { Formik, Form } from "formik";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -62,29 +62,36 @@ const Login = () => {
               action.setSubmitting(false);
             }}
           >
-            {() => (
-              <Box
-                component="form"
-                sx={{ display: "flex", flexDirection: "column", gap: 2 }}
-              >
-                <TextField
-                  label="Email"
-                  name="email"
-                  id="email"
-                  type="email"
-                  variant="outlined"
-                />
-                <TextField
-                  label="password"
-                  name="password"
-                  id="password"
-                  type="password"
-                  variant="outlined"
-                />
-                <Button variant="contained" type="submit">
-                  Submit
-                </Button>
-              </Box>
+            {({handleChange, handleBlur, values}) => (
+              <Form>
+                <Box
+                  component="form"
+                  sx={{ display: "flex", flexDirection: "column", gap: 2 }}
+                >
+                  <TextField
+                    label="Email"
+                    name="email"
+                    id="email"
+                    type="email"
+                    variant="outlined"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.email}
+                    error={}
+                    helperText={}
+                  />
+                  <TextField
+                    label="password"
+                    name="password"
+                    id="password"
+                    type="password"
+                    variant="outlined"
+                  />
+                  <Button variant="contained" type="submit">
+                    Submit
+                  </Button>
+                </Box>
+              </Form>
             )}
           </Formik>
 
