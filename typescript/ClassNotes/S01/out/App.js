@@ -22,3 +22,11 @@
 //? Data types
 //? Array
 let num = [1, "string"];
+let a = [];
+a.push("hasan");
+a.push("ali", "mehmet");
+console.log(a);
+let b = [];
+b.push("5");
+b.push(5);
+console.log(b);

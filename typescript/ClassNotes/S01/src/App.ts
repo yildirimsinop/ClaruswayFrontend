@@ -33,3 +33,18 @@
 //? Array
 
 let num : any[] = [1, "string"]
+
+let a: string [] = []
+
+a.push("hasan")
+
+a.push("ali", "mehmet")
+
+console.log(a)
+
+let b = []
+
+b.push("5")
+b.push(5)
+
+console.log(b)
