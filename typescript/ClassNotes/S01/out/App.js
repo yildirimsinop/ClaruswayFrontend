@@ -36,21 +36,109 @@ b.push(5)
 
  */
 //Tuples
-let myTuple;
-myTuple = [13.4, false, 'Hello World'];
+/* let myTuple: [number, boolean,string];
+myTuple = [13.4,false,'Hello World']; */
 //Tuple Array
-let arrTuples;
-arrTuples = [[1, 'Mark'], [2, 'Anthony']];
-arrTuples.push([3, 'Ethan']);
+/* let arrTuples: [number,string][];
+
+arrTuples = [[1, 'Mark'],[2, 'Anthony']]
+
+arrTuples.push([3,'Ethan'])
+ */
 //Enums
-var Color;
-(function (Color) {
-    Color[Color["Red"] = 0] = "Red";
-    Color[Color["Green"] = 100] = "Green";
-    Color[Color["Blue"] = 105] = "Blue";
-    Color[Color["Yellow"] = 106] = "Yellow";
-})(Color || (Color = {}));
-console.log(Color.Green);
-console.log(Color.Blue);
-console.log(Color.Yellow);
-console.log("XS" /* Tshirt.XSmall */);
+/* enum Color {
+    Red,
+    Green = 100,
+    Blue = Green +5,
+    Yellow,
+}
+
+console.log(Color.Green)
+console.log(Color.Blue)
+console.log(Color.Yellow)
+
+//String Enum
+const enum Tshirt {
+    XSmall = 'XS',
+    Small = 'S',
+    Medium = 'M'
+}
+
+console.log(Tshirt.XSmall)
+
+
+//Mix Enum
+
+enum Mixed {
+    Red,
+    Green,
+    Blue = 'Mavi',
+    Yellow = 'Sari',
+    Magenta = 120,
+    Brown,
+
+} */
+// Any & unknown
+/* let a: any = 'Hello'
+
+let b:number = a
+
+let c : unknown = 5
+
+let d: number = c as number
+
+let e: any = c */
+//void
+/* function myFunction ():number {
+    console.log('Hello World')
+    return 3
+} */
+// Union type & Type narrowing
+/* function checkNumber (n:(string | number)):string{
+
+    
+    //type narrowing
+    if (typeof n === 'number'){
+
+        n
+
+    }else{
+
+        n.
+
+    }
+    return 'Hello'
+}
+
+
+let xyz : string | boolean = '0';
+xyz = 'Hello'
+xyz = true
+xyz = 3 */
+//Aliases
+/* type Check = string | number
+
+let f: Check;
+f = 0,
+f = 'Merhaba'
+f= false
+
+let g :string | number
+let h :string | number
+let i :Check */
+//String literals
+// type Car = 'BMW' | 'Audi' 
+// let car1: Car = 'BMW'
+// let car2: Car = 'BMW'
+// let car3: Car = 'Fiat'
+//? Object
+const car = {
+    make: "Toyota",
+    model: "Corolla",
+    year: 2020,
+    sunroof: false,
+    age(CurrentYear) {
+        console.log(`age=${CurrentYear - this.year}`);
+    }
+};
+//?Intersection
