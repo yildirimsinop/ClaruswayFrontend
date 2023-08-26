@@ -216,9 +216,10 @@ type Intersected_type = Book & Author;
 //   console.log((score as number).toFixed(2))
 //   console.log(score)
 
-function selamla(greet:string, name:string):string{
+function selamla(greet:string, name?:string):string{
     if(!name) name = "user"
     return `${greet} ${name}`
 }
 
 selamla("Hei", "Eren")
+selamla("Hei")
