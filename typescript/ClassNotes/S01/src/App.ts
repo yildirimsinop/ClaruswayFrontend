@@ -175,7 +175,6 @@ let car3: Car = 'Fiat' */
         console.log(`age = ${CurrentYear-this.year}`)
     
     }
-   
 } */
 
 // car.year = 2021 //read only ye atama yapılamaz
@@ -209,3 +208,10 @@ type Intersected_type = Book & Author;
 
   }
      */
+
+  //?Type Assertion
+
+  let score: unknown = "350"
+  console.log((<string>score).length)
+  console.log((score as number).toFixed(2))
+  console.log(score)

@@ -127,18 +127,58 @@ let g :string | number
 let h :string | number
 let i :Check */
 //String literals
-// type Car = 'BMW' | 'Audi' 
-// let car1: Car = 'BMW'
-// let car2: Car = 'BMW'
-// let car3: Car = 'Fiat'
-//? Object
-const car = {
-    make: "Toyota",
-    model: "Corolla",
+/* type Car = 'BMW' | 'Audi'
+
+let car1: Car = 'BMW'
+let car2: Car = 'BMW'
+let car3: Car = 'Fiat' */
+//Object
+/*  const car:{
+    make:string,
+    model:string,
+    readonly year:number,
+    sunroof?:boolean,
+    age(CurrentYear:number):void
+} = {
+    make : 'Toyota',
+    model: 'Corolla',
     year: 2020,
-    sunroof: false,
-    age(CurrentYear) {
-        console.log(`age=${CurrentYear - this.year}`);
+    age(CurrentYear:number){
+        console.log(`age = ${CurrentYear-this.year}`)
+    
     }
-};
-//?Intersection
+   
+} */
+// car.year = 2021 //read only ye atama yapılamaz
+//car.age(2023)
+//Intersection
+/* type Book = {
+    book_id: number;
+    book_name: string;
+  }
+    
+type Author = {
+    Author_Id: number;
+    Author_name: string;
+  }
+    
+type Intersected_type = Book & Author;
+    
+  let book1: Intersected_type = {
+    book_id: 1234,
+    book_name: "Lord of the Rings",
+    Author_Id: 1892,
+    Author_name: "J. R. R. Tolkien",
+  };
+
+  let book2: Book ={
+    book_id : 1,
+    book_name: 'FS'
+
+  }
+     */
+//?Type Assertion
+let score = "350";
+console.log(score.length);
+console.log(score.toFixed(2));
+console.log(score);
