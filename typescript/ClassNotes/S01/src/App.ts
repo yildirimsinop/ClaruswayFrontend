@@ -175,6 +175,7 @@ let car3: Car = 'Fiat' */
         console.log(`age = ${CurrentYear-this.year}`)
     
     }
+   
 } */
 
 // car.year = 2021 //read only ye atama yapılamaz
@@ -209,17 +210,46 @@ type Intersected_type = Book & Author;
   }
      */
 
-//   //?Type Assertion
+//Type Assertion
 
-//   let score: unknown = "350"
-//   console.log((<string>score).length)
-//   console.log((score as number).toFixed(2))
-//   console.log(score)
+/* let score: unknown = '350';
 
-function selamla(greet:string, name?:string):string{
-    if(!name) name = "user"
+console.log(score.length)
+console.log((<string>score).length)
+console.log((score as number).toFixed(2))
+console.log(score) */
+
+
+//functions
+
+/* function selamla(greet:string, name?:string):string{
+    if(!name) name = 'user'
     return `${greet} ${name}`
 }
 
-selamla("Hei", "Eren")
-selamla("Hei")
+selamla('Hi' , 'Eren')
+selamla('Hi', 2) */
+
+//function overload
+
+/* function add (a:string, b:string):string;
+function add (a:number, b:number):number;
+function add (a:any, b:any):any{
+    return a+b
+}
+
+console.log(add('Hello ', 'Cohort14'))
+console.log(add(3,'Merhaba'))
+ */
+
+//rest parameters
+
+function add (num1: number, ...numbers:number[]):void{
+    let total = num1;
+
+    numbers.forEach(number=> total+=number)
+    console.log(total)
+}
+
+add(5)
+add(1,2,3,4,5)
