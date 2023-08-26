@@ -209,9 +209,16 @@ type Intersected_type = Book & Author;
   }
      */
 
-  //?Type Assertion
+//   //?Type Assertion
 
-  let score: unknown = "350"
-  console.log((<string>score).length)
-  console.log((score as number).toFixed(2))
-  console.log(score)
+//   let score: unknown = "350"
+//   console.log((<string>score).length)
+//   console.log((score as number).toFixed(2))
+//   console.log(score)
+
+function selamla(greet:string, name:string):string{
+    if(!name) name = "user"
+    return `${greet} ${name}`
+}
+
+selamla("Hei", "Eren")

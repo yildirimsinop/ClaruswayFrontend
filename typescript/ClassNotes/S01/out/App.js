@@ -147,7 +147,6 @@ let car3: Car = 'Fiat' */
         console.log(`age = ${CurrentYear-this.year}`)
     
     }
-   
 } */
 // car.year = 2021 //read only ye atama yapılamaz
 //car.age(2023)
@@ -177,8 +176,14 @@ type Intersected_type = Book & Author;
 
   }
      */
-//?Type Assertion
-let score = "350";
-console.log(score.length);
-console.log(score.toFixed(2));
-console.log(score);
+//   //?Type Assertion
+//   let score: unknown = "350"
+//   console.log((<string>score).length)
+//   console.log((score as number).toFixed(2))
+//   console.log(score)
+function selamla(greet, name) {
+    if (!name)
+        name = "user";
+    return `${greet} ${name}`;
+}
+selamla("Hei", "Eren");
