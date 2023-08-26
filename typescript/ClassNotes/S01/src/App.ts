@@ -1,7 +1,6 @@
 // console.log('Hello World');
 
-// console.log('Hello World');
-// const button = document.getElementById('submit')! as HTMLButtonElement;
+// const button = document.getElementById('submit');
 // const a = document.getElementById('input1')! as HTMLInputElement;
 // const b = document.getElementById('input2')! as HTMLInputElement;
 // const result = document.getElementById('result');
@@ -14,37 +13,148 @@
 // });
 
 
-// //? Type Annotation
-// //? Type Annotation
+// Type Annotation
 
-// let x : number= 5
+/* let x : number = 5
+let y = 'Hello World'
+y = x
 
-// let y = "Hello World"
+let z;
 
-// y = x
+z = false
+z = 5
+z = 'Hello World'
 
-// let z;
+x = z */
 
-// z = false
-// z= 5
-// z= "Hello World"
+//Data types
 
-//? Data types
-//? Array
+// Array
 
-let num : any[] = [1, "string"]
+/* let num : number[] = [1,'string',false]
 
-let a: string [] = []
-
-a.push("hasan")
-
-a.push("ali", "mehmet")
-
-console.log(a)
-
+let a: string[] = []
 let b = []
 
-b.push("5")
+a.push('5')
+a.push(5)
+
+b.push('5')
 b.push(5)
 
-console.log(b)
+ */
+
+//Tuples
+
+/* let myTuple: [number, boolean,string];
+myTuple = [13.4,false,'Hello World']; */
+
+//Tuple Array
+/* let arrTuples: [number,string][];
+
+arrTuples = [[1, 'Mark'],[2, 'Anthony']]
+
+arrTuples.push([3,'Ethan'])
+ */
+//Enums
+
+
+/* enum Color {
+    Red,
+    Green = 100,
+    Blue = Green +5,
+    Yellow,
+}
+
+console.log(Color.Green)
+console.log(Color.Blue)
+console.log(Color.Yellow)
+
+//String Enum
+const enum Tshirt {
+    XSmall = 'XS',
+    Small = 'S',
+    Medium = 'M'
+}
+
+console.log(Tshirt.XSmall)
+
+
+//Mix Enum
+
+enum Mixed {
+    Red,
+    Green,
+    Blue = 'Mavi',
+    Yellow = 'Sari',
+    Magenta = 120,
+    Brown,
+
+} */
+
+// Any & unknown
+
+
+/* let a: any = 'Hello'
+
+let b:number = a
+
+let c : unknown = 5
+
+let d: number = c as number
+
+let e: any = c */
+
+//void
+
+/* function myFunction ():number {
+    console.log('Hello World')
+    return 3 
+} */
+
+
+// Union type & Type narrowing
+
+/* function checkNumber (n:(string | number)):string{
+
+    
+    //type narrowing
+    if (typeof n === 'number'){
+
+        n
+
+    }else{
+
+        n.
+
+    }
+    return 'Hello'
+}
+
+
+let xyz : string | boolean = '0';
+xyz = 'Hello'
+xyz = true
+xyz = 3 */
+
+
+//Aliases
+
+/* type Check = string | number
+
+let f: Check;
+f = 0,
+f = 'Merhaba'
+f= false
+
+let g :string | number
+let h :string | number
+let i :Check */
+
+//String literals
+
+type Car = 'BMW' | 'Audi' 
+
+let car1: Car = 'BMW'
+let car2: Car = 'BMW'
+let car3: Car = 'Fiat'
