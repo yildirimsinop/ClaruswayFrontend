@@ -1,12 +1,15 @@
-import { Container } from "@mui/material";
-import Home from "./pages/Home";
+import { Container } from "@mui/material"
+
 
 function App() {
+  
+
   return (
     <Container>
-      <Home />
+      Merhaba
+        
     </Container>
-  );
+  )
 }
 
-export default App;
+export default App
