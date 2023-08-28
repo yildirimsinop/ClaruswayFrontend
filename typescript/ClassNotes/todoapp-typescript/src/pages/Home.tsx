@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Container, Typography } from "@mui/material";
 import AddTodoComp from "../components/AddTodoComp";
-interface TodoType {
-  todo: string;
-  isDone: boolean;
-  id: string | number; // id bilgisi string yada number olabilir. İki veri tipinide kabul edecek.
-}
+import TodoList from "../components/TodoList";
+// interface TodoType {
+//   todo: string;
+//   isDone: boolean;
+//   id: string | number; // id bilgisi string yada number olabilir. İki veri tipinide kabul edecek.
+// }
 
 const Home = () => {
   // const [todos, setTodos] = useState([] as TodoType[]);
@@ -25,6 +26,42 @@ const Home = () => {
     }
   };
 
+  // const addTodo = async (text:string) => {
+  //   try {
+
+  //   } catch (error) {}
+  // };
+  type AddFn = (text: string) => Promise<void>;
+
+  const addTodo: AddFn = async text => {
+    try {
+      await axios.post(url, { todo: text, isDone: false });
+    } catch (error) {
+      console.log(error);
+    } finally {
+      getTodos();
+    }
+  };
+
+  const toggleTodo: ToggleFn = async (todo) => {
+    try {
+      await axios.put(`${url}/${todo.id}`,{...todo,isDone: !todo.isDone});
+    } catch (error) {
+      console.log(error);
+    } finally {
+      getTodos();
+    }
+  };
+  const deleteTodo: DeleteFn = async (id) => {
+    try {
+      await axios.delete(`${url}/${id}`);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      getTodos();
+    }
+  };
+
   useEffect(() => {
     getTodos();
   }, []);
@@ -39,7 +76,8 @@ const Home = () => {
         mt={3}>
         Todo App with Typescript
       </Typography>
-      <AddTodoComp/>
+      <AddTodoComp addTodo={addTodo} />
+      <TodoList todos={todos} deleteTodo={deleteTodo} toggleTodo={toggleTodo} />
     </Container>
   );
 };
