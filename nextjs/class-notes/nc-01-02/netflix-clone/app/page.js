@@ -1,8 +1,8 @@
 import Link from "next/link";
+//? app folder içindeki page.js "/" route olan home sayfasıdır
 
-//? app folder icindeki page.js "/" route olan home sayfasidir.
+//? nextjs'de tüm componentler default olarak server componenttir. client component kullanmak için "use-client" direktifini kullanmamız gerekir
 
-//? next.jsæde tum componentler default olarak server componenttir. Client component kullanmak icin "use-client" direktifini kullanmamiz gerekir.
 export default function Home() {
   return (
     <div className="relative h-screen w-full bg-[url('/images/hero.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
@@ -15,9 +15,8 @@ export default function Home() {
             Watch anywhere. Cancel anytime.
           </p>
           {/* //? next/link arka planda sayfayı önceden fetch edilir. Bu, client tarafı gezintilerin performansını iyileştirmek için kullanışlıdır. Görünüm alanındaki herhangi bir <Link />  önceden yüklenecektir. */}
-
           <Link href="/register">
-            <button className="btn-danger w-[250px]">Get started</button>
+            <button className="btn-danger w-[250px]">Get Started</button>
           </Link>
         </div>
       </div>
