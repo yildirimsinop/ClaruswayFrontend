@@ -1,3 +1,4 @@
+//? next.jsæde tum componentler default olarak server componenttir. Client component kullanmak icin "use-client" direktifini kullanmamiz gerekir.
 export default function Home() {
   return (
     <div>
